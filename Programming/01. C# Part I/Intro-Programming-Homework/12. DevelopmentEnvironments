@@ -1,0 +1,45 @@
+### Problem 12. Development Environments
+*	Perform a research (e.g. in Google or Wikipedia) and provide a short list 
+	with popular development environments (IDEs) like Visual Studio.
+*	Write in a text file called `“list-of-IDEs.txt”` at least five IDEs along 
+	with 2-3 sentences about each of them. Use English.
+
+	Some of the most popular development environments are Visual Studio, Eclipse,
+NetBeans, Mono, Code::Blocks.
+
+	Visual Studio is an integrated development environment (IDE) from Microsoft. It is 
+used to develop computer programs for Microsoft Windows, as well as web sites, web 
+applications and web services. Visual Studio uses Microsoft software development platforms 
+such as Windows API, Windows Forms, Windows Presentation Foundation, Windows Store and 
+Microsoft Silverlight. It can produce both native code and managed code.
+	
+	Eclipse is an integrated development environment (IDE). It contains a base workspace 
+and an extensible plug-in system for customizing the environment. Written mostly in Java, 
+Eclipse can be used to develop applications. By means of various plug-ins, Eclipse may 
+also be used to develop applications in other programming languages: Ada, ABAP, C, C++, 
+COBOL, Fortran, Haskell, JavaScript, Lasso, Natural, Perl, PHP, Prolog, Python, R, Ruby 
+(including Ruby on Rails framework), Scala, Clojure, Groovy, Scheme, and Erlang.
+	
+	NetBeans is an integrated development environment (IDE) for developing primarily 
+with Java. It is also an application platform framework for Java desktop applications 
+and others. The NetBeans IDE is written in Java and can run on Windows, OS X, Linux, 
+Solaris and other platforms supporting a compatible JVM. The NetBeans Platform allows
+applications to be developed from a set of modular software components called modules. 
+Applications based on the NetBeans Platform (including the NetBeans IDE itself) can be 
+extended by third party developers.
+
+	Mono is a free and open source project led by Xamarin (formerly by Novell and 
+originally by Ximian) to create an Ecma standard-compliant, .NET Framework-compatible 
+set of tools including, among others, a C# compiler and a Common Language Runtime.
+The stated purpose of Mono is not only to be able to run Microsoft .NET applications 
+cross-platform, but also to bring better development tools to Linux developers.
+The major components of Mono include code execution engine, class libraries, CLI assemblies,
+CLI metadata, Mono's Common Language Runtime, Mono-specific enhancements, native interop 
+services and COM interop, security - Transparent Code Framework.
+
+	Code::Blocks is a free, open source cross-platform IDE which supports multiple compilers 
+including GCC, Clang and Visual C++. It is developed in C++ using wxWidgets as the GUI toolkit. 
+Using a plugin architecture, its capabilities and features are defined by the provided plugins. 
+Currently, Code::Blocks is oriented towards C, C++, and Fortran. It has a custom build system 
+and optional Make support. Code::Blocks is being developed for Windows, Linux, and Mac OS X and 
+has been ported to FreeBSD, OpenBSD and Solaris.

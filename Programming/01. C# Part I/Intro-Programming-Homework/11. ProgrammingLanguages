@@ -1,0 +1,56 @@
+### Problem 11. Programming Languages
+*	Perform a research (e.g. in Google or Wikipedia) and provide a short list 
+	with information about the most popular programming languages. 
+	How similar are they to C#? How do they differ from C#?
+*	Write in a text file called `“programming-languages.txt”` at least five languages 
+	along with 2-3 sentences about each of them. Use English.
+
+	Some of the most popular programming languages are C++, C#, Java, Javascript, PHP.
+Most of these languages especially C-like langueages - C++, Java, C# have similar syntax.
+A programming language's surface form is known as its syntax. Most programming languages
+are purely textual; they use sequences of text including words, numbers, and punctuation, 
+much like written natural languages. 
+	Their major difference is their semantics. The term Semantics refers to the meaning of languages, 
+as opposed to their form (syntax). Semantics can be static and dynamic. Newer programming languages 
+like Java and C# have definite assignment analysis, a form of data flow analysis, as part of their 
+static semantics.The dynamic semantics (also known as execution semantics) of a language defines 
+how and when the various constructs of a language should produce a program behavior.
+ 
+	C++ is a general-purpose programming language. It has imperative, object-oriented and generic 
+programming features, while also providing the facilities for low-level memory manipulation.
+It is designed with a bias toward system programming (e.g., for use in embedded systems or 
+operating system kernels), with performance, efficiency and flexibility of use as its design 
+requirements. C++ is standardized by the International Organization for Standardization (ISO).
+Many other programming languages have been influenced by C++, including C#, Java, and newer 
+versions of C.
+	
+	C#	is a multi-paradigm programming language encompassing strong typing, imperative, declarative, 
+functional, generic, object-oriented (class-based), and component-oriented programming disciplines.
+C# is intended to be a simple, modern, general-purpose, object-oriented programming language.
+By design, C# is the programming language that most directly reflects the underlying Common Language 
+Infrastructure (CLI). Most of its intrinsic types correspond to value-types implemented by the CLI 
+framework. However, the language specification does not state the code generation requirements of the
+compiler: that is, it does not state that a C# compiler must target a Common Language Runtime, or 
+generate Common Intermediate Language (CIL), or generate any other specific format.
+
+	Java  is a functional computer programming language that is concurrent, class-based, object-oriented,
+and specifically designed to have as few implementation dependencies as possible. It is intended to let 
+application developers "write once, run anywhere" (WORA), meaning that code that runs on one platform does 
+not need to be recompiled to run on another.Java applications are typically compiled to bytecode that can 
+run on any Java virtual machine (JVM) regardless of computer architecture. The language derives much of its 
+syntax from C and C++, but it has fewer low-level facilities than either of them.
+
+	Javascript is a dynamic computer programming language. It is most commonly used as part of web browsers,
+whose implementations allow client-side scripts to interact with the user, control the browser, communicate 
+asynchronously, and alter the document content that is displayed. It is also used in server-side network 
+programming with runtime environments such as Node.js, game development and the creation of desktop and 
+mobile applications. JavaScript is classified as a prototype-based scripting language with dynamic typing and 
+first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, 
+imperative, and functional programming styles.
+
+	PHP	is a server-side scripting language designed for web development but also used as a general-purpose 
+programming language. PHP code can be simply mixed with HTML code, or it can be used in combination with 
+various templating engines and web frameworks. PHP code is usually processed by a PHP interpreter, which is 
+usually implemented as a web server's native module or a Common Gateway Interface (CGI) executable. After 
+the PHP code is interpreted and executed, the web server sends resulting output to its client, usually in 
+form of a part of the generated web page.
