@@ -31,11 +31,16 @@ namespace _25.ExtractTextFromHtml
         {
 //            string inputStr = @"
 //            <html>
-//                <head><title>News</title></head>
-//                    <body><p><a href=""http://academy.telerik.com"">Telerik
-//                        Academy</a>aims to provide free real-world practical
+//                <head>
+//                    <title>News</title>
+//                </head>
+//                <body>
+//                    <p><a href=""http://academy.telerik.com"">Telerik
+//                        Academy</a> aims to provide free real-world practical
 //                        training for young people who want to turn into
-//                        skilful .NET software engineers.</p></body>
+//                        skilful .NET software engineers.
+//                    </p>
+//                </body>
 //            </html>";
 
             string inputStr = Console.ReadLine();
@@ -61,7 +66,7 @@ namespace _25.ExtractTextFromHtml
                 }
                 else
                 {
-                    htmlSource = htmlSource.Replace(item.Groups[2].Value, " ");
+                    htmlSource = htmlSource.Replace(item.Groups[2].Value, string.Empty);
                 }
             }
             

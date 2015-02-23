@@ -33,7 +33,6 @@ namespace _22.WordsCount
             }
         }
 
-
         private static Dictionary<string, int> WordsCountInText(string text)
         {
             Dictionary<string, int> words = new Dictionary<string, int>();
