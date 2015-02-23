@@ -1,0 +1,6 @@
+﻿equal line
+equal line
+equal line
+different line
+different line
+equal line

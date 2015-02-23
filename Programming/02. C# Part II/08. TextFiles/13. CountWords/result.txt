@@ -1,0 +1,12 @@
+lorem --> 5
+diam --> 4
+ipsum --> 3
+volutpat --> 2
+aliquam --> 2
+proin --> 1
+vestibulum --> 1
+curabitur --> 1
+nulla --> 1
+velit --> 0
+fringilla --> 0
+dapibus --> 0
