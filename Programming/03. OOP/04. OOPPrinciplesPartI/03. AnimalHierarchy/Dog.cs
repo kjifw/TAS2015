@@ -18,15 +18,5 @@ namespace _03.AnimalHierarchy
             
             return dogSound;
         }
-
-        public override string ToString()
-        {
-            StringBuilder dogInfo = new StringBuilder();
-
-            dogInfo.Append(base.ToString());
-            dogInfo.Append(" animal type: " + this.GetType().Name + ";");
-
-            return dogInfo.ToString();
-        }
     }
 }

@@ -6,6 +6,10 @@ namespace _04.AgeRange
 
     public class Student
     {
+        private string firstName;
+        private string lastName;
+        private int age;
+
         public Student(string firstName, string lastName, int age)
         {
             this.FirstName = firstName;
@@ -13,9 +17,44 @@ namespace _04.AgeRange
             this.Age = age;
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
+        public string FirstName 
+        {
+            get
+            {
+                return this.firstName;
+            }
+            set
+            {
+                this.firstName = value;
+            }
+        }
+        public string LastName
+        {
+            get
+            {
+                return this.lastName;
+            }
+            set
+            {
+                this.lastName = value;
+            }
+        }
+        public int Age 
+        {
+            get
+            {
+                return this.age;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Age must be positive");
+                }
+
+                this.age = value;
+            }
+        }
 
         public override string ToString()
         {

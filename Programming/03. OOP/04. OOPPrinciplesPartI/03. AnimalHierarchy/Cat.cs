@@ -18,15 +18,5 @@ namespace _03.AnimalHierarchy
             
             return catSound;
         }
-
-        public override string ToString()
-        {
-            StringBuilder catInfo = new StringBuilder();
-
-            catInfo.Append(base.ToString());
-            catInfo.Append(" animal type: " + this.GetType().Name + ";");
-
-            return catInfo.ToString();
-        }
     }
 }

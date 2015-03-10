@@ -67,7 +67,6 @@ namespace _01.SchoolAndClasses
             Console.WriteLine(currentSchool);
         }
 
-
         private static List<Discipline> GenerateDisciplines()
         {
             List<Discipline> disciplines = new List<Discipline>();

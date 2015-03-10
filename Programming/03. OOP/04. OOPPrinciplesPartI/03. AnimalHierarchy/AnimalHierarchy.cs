@@ -20,7 +20,6 @@ namespace _03.AnimalHierarchy
         static void Main(string[] args)
         {
             List<Animal> animals = GenerateAnimals();
-            List<Cat> cats = GenerateCats();
 
             var dogsAvgAge = GetAverageAge(animals, typeof(Dog));
 
@@ -28,20 +27,19 @@ namespace _03.AnimalHierarchy
 
             var frogsAvgAge = GetAverageAge(animals, typeof(Frog));
 
+            var kittenAvgAge = GetAverageAge(animals, typeof(Kitten));
+
+            var tomcatAvgAge = GetAverageAge(animals, typeof(Tomcat));
+
             Console.WriteLine("dogs average age: {0}", dogsAvgAge);
             Console.WriteLine("cats average age: {0}", catsAvgAge);
             Console.WriteLine("frogs average age: {0}", frogsAvgAge);
+            Console.WriteLine("kitten average age: {0}", kittenAvgAge);
+            Console.WriteLine("tomcat average age: {0}", tomcatAvgAge);
 
             Console.WriteLine();
             Console.WriteLine("Animals: ");
             foreach (var item in animals)
-            {
-                Console.WriteLine(item + " " + item.MakeSound());
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Cats: ");
-            foreach (var item in cats)
             {
                 Console.WriteLine(item + " " + item.MakeSound());
             }
@@ -69,22 +67,14 @@ namespace _03.AnimalHierarchy
             animals.Add(new Frog("stamat", 7, true));
             animals.Add(new Dog("tosho", 10, true));
             animals.Add(new Cat("tisho", 6, true));
+            animals.Add(new Tomcat("krasi", 3));
+            animals.Add(new Tomcat("petko", 1));
+            animals.Add(new Tomcat("genadi", 2));
+            animals.Add(new Kitten("mimi", 1));
+            animals.Add(new Kitten("lili", 2));
+            animals.Add(new Kitten("petia", 3));
 
             return animals;
-        }
-
-        private static List<Cat> GenerateCats()
-        {
-            List<Cat> cats = new List<Cat>();
-
-            cats.Add(new Tomcat("krasi", 3));
-            cats.Add(new Tomcat("petko", 1));
-            cats.Add(new Tomcat("genadi", 2));
-            cats.Add(new Kitten("mimi", 1));
-            cats.Add(new Kitten("lili", 2));
-            cats.Add(new Kitten("petia", 3));
-
-            return cats;
         }
     }
 }

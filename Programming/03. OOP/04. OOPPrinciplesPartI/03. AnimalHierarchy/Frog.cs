@@ -18,15 +18,5 @@ namespace _03.AnimalHierarchy
             
             return frogSound;
         }
-
-        public override string ToString()
-        {
-            StringBuilder frogInfo = new StringBuilder();
-
-            frogInfo.Append(base.ToString());
-            frogInfo.Append(" animal type: " + this.GetType().Name + ";");
-
-            return frogInfo.ToString();
-        }
     }
 }

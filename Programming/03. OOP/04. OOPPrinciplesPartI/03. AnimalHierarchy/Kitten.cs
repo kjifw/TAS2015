@@ -18,10 +18,5 @@ namespace _03.AnimalHierarchy
 
             return kittenSound;
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }
