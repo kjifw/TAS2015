@@ -1,0 +1,193 @@
+﻿<!-- For task contion please refer to https://github.com/TelerikAcademy/HTML/tree/master/5.%20HTML%20Forms%20and%20Frames -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Grid</title>
+    <style type="text/css">
+        body, table, th, td, tr, thead, tfoot, tbody {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 700px;
+        }
+
+        .FirstName, .LastName {
+            width: 15%;
+        }
+
+        .FacultyNumber {
+            width: 20%;
+        }
+
+        .Math, .Biology, .Physics, .English {
+            width: 10%;
+        }
+
+        .Total {
+            font-weight: 700;
+        }
+
+        th, td {
+            border: 2px solid rgb(150, 150, 150);
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Order</th>
+                <th colspan="3">Personal Info</th>
+                <th colspan="5">University Marks</th>
+            </tr>
+            <tr>
+                <th class="FirstName">First Name</th>
+                <th class="LastName">Last Name</th>
+                <th class="FacultyNumber">Faculty Number</th>
+                <th class="English">English</th>
+                <th class="Math">Math</th>
+                <th class="Biology">Biology</th>
+                <th class="Physics">Physics</th>
+                <th class="Total">Total</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="9">
+                    <nav>
+                        <input type="button" value="Previous" />
+                        <a href="#">1</a>,
+                        <a href="#">2</a>,
+                        <a href="#">3</a>,
+                        <a href="#">4</a>,
+                        ... ,
+                        <a href="#">10</a>
+                        <input type="button" value="Next" />
+                    </nav>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td class="FirstName">Pesho</td>
+                <td class="LastName">Yordanov</td>
+                <td class="FacultyNumber">123456</td>
+                <td class="English">2</td>
+                <td class="Math">3</td>
+                <td class="Biology">4</td>
+                <td class="Physics">5</td>
+                <td class="Total">3.50</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

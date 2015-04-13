@@ -1,0 +1,160 @@
+﻿<!-- For task contion please refer to https://github.com/TelerikAcademy/HTML/tree/master/5.%20HTML%20Forms%20and%20Frames -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Component</title>
+    <link type="text/css" rel="stylesheet" href="Styles/Grid.css" />
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="6">
+                    Drag a column header and drop it here to group by that column
+                </td>
+            </tr>
+            <tr>
+                <th class="ProductId">Product ID</th>
+                <th class="ProductName">Product Name</th>
+                <th class="UnitPrice">Unit Price</th>
+                <th class="QuantityPerUnit">Quantity Per Unit</th>
+                <th class="UnitInStock">Unit In Stock</th>
+                <th class="Discontinued">Discontinued</th>
+            </tr>
+            <tr>
+                <td class="ProductId"><input type="text" /></td>
+                <td class="ProductName"><input type="text" /></td>
+                <td class="UnitPrice"><input type="text" /><input type="button" class="TheadButton" /></td>
+                <td class="QuantityPerUnit"><input type="text" /></td>
+                <td class="UnitInStock"><input type="text" /><input type="button"  class="TheadButton"/></td>
+                <td class="Discontinued"><input type="button" class="TheadButton"/></td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <nav id="tFootNav">
+                        <div id="leftNavButtons">
+                            <input type="button" id="leftArrowLine" />
+                            <input type="button" id="leftArrow" />
+                        </div>
+                        <span>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            ...
+                        </span>
+                        <div id="rightNavButtons">
+                            <input type="button" id="rightArrow" />
+                            <input type="button" id="rightArrowLine" />
+                        </div>
+                    </nav>
+                    <label for="PageSize">Page Size: </label>
+                    <select id="pageSize" name="PageSize">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                    <div id="tFootRight">
+                        <input type="text" disabled="disabled" value="335104" />
+                        <span>items in</span>
+                        <input type="text" disabled="disabled" value="33511" />
+                        <span>pages</span>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td class="ProductId">1</td>
+                <td class="ProductName">Chai</td>
+                <td class="UnitPrice">$18.00</td>
+                <td class="QuantityPerUnit">10 boxes x 20 bags</td>
+                <td class="UnitInStock">39</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">2</td>
+                <td class="ProductName">Chang</td>
+                <td class="UnitPrice">$19.00</td>
+                <td class="QuantityPerUnit">24 - 12 oz bottles</td>
+                <td class="UnitInStock">17</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">3</td>
+                <td class="ProductName">Aniseed Syrup</td>
+                <td class="UnitPrice">$10.00</td>
+                <td class="QuantityPerUnit">12 - 550ml bottles</td>
+                <td class="UnitInStock">13</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">4</td>
+                <td class="ProductName">Chef Anton's Cajun Seasoning</td>
+                <td class="UnitPrice">$22.00</td>
+                <td class="QuantityPerUnit">48 - 6 oz jars</td>
+                <td class="UnitInStock">53</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">5</td>
+                <td class="ProductName">Chef Anton's Gumbo Mix</td>
+                <td class="UnitPrice">$21.35</td>
+                <td class="QuantityPerUnit">36 boxes</td>
+                <td class="UnitInStock">0</td>
+                <td class="Discontinued"><input type="checkbox" checked disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">6</td>
+                <td class="ProductName">Grandma's Boysenberry Spread</td>
+                <td class="UnitPrice">$25.00</td>
+                <td class="QuantityPerUnit">12 - 8 oz jars</td>
+                <td class="UnitInStock">120</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">7</td>
+                <td class="ProductName">Uncle Bob's Organic Dried Pearls</td>
+                <td class="UnitPrice">$30.00</td>
+                <td class="QuantityPerUnit">12 - 1 lb pkgs.</td>
+                <td class="UnitInStock">15</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">8</td>
+                <td class="ProductName">Northwoods Cranberry Sauce</td>
+                <td class="UnitPrice">$40.00</td>
+                <td class="QuantityPerUnit">12 - 12 oz jars</td>
+                <td class="UnitInStock">6</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">9</td>
+                <td class="ProductName">Mishi Kobe Niku</td>
+                <td class="UnitPrice">$97.00</td>
+                <td class="QuantityPerUnit">18 - 500 g pkgs.</td>
+                <td class="UnitInStock">39</td>
+                <td class="Discontinued"><input type="checkbox" checked disabled="disabled" /></td>
+            </tr>
+            <tr>
+                <td class="ProductId">10</td>
+                <td class="ProductName">Ikura</td>
+                <td class="UnitPrice">$31.00</td>
+                <td class="QuantityPerUnit">12 - 200 ml jars</td>
+                <td class="UnitInStock">31</td>
+                <td class="Discontinued"><input type="checkbox" disabled="disabled" /></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

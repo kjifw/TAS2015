@@ -1,0 +1,128 @@
+body, table, thead, tfoot, tbody, tr, td, a, img,
+div, span, nav {
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 20px; }
+  body table {
+    border-spacing: 0;
+    font-family: Calibri; }
+    body table thead tr:first-child td:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    body table tfoot tr:first-child td:first-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    body table thead, body table tfoot {
+      background-image: url(../Images/tableBackground.jpg); }
+    body table th, body table td {
+      border: 1px solid grey;
+      padding: 5px; }
+    body table .ProductId {
+      width: 75px; }
+      body table .ProductId input {
+        width: 25px; }
+    body table .ProductName {
+      width: 300px;
+      text-align: left; }
+    body table .UnitPrice {
+      width: 200px; }
+      body table .UnitPrice input[type~=text] {
+        width: 75px;
+        margin-right: 10px;
+        position: relative;
+        float: left; }
+    body table .QuantityPerUnit {
+      width: 180px; }
+    body table .UnitInStock {
+      width: 200px; }
+      body table .UnitInStock input[type~=text] {
+        width: 75px;
+        margin-right: 10px;
+        position: relative;
+        float: left; }
+    body table .TheadButton {
+      background-image: url("../Images/theadButton.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      border: 1px inset;
+      border-color: white;
+      border-radius: 5px; }
+    body table .Discontinued {
+      text-align: center; }
+    body table #tFootNav #leftNavButtons {
+      position: relative;
+      float: left; }
+      body table #tFootNav #leftNavButtons #leftArrowLine {
+        background-image: url("../Images/tfootLeftArrowLine.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        border: 1px inset;
+        border-color: white;
+        border-radius: 5px; }
+      body table #tFootNav #leftNavButtons #leftArrow {
+        background-image: url("../Images/tfootLeftArrow.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        border: 1px inset;
+        border-color: white;
+        border-radius: 5px; }
+    body table #tFootNav span {
+      position: relative;
+      float: left;
+      width: auto;
+      margin-left: 20px; }
+      body table #tFootNav span a {
+        text-decoration: none;
+        color: black;
+        width: 9%; }
+        body table #tFootNav span a:visited {
+          color: black; }
+        body table #tFootNav span a:hover {
+          color: black; }
+    body table #tFootNav #rightNavButtons {
+      position: relative;
+      float: left;
+      margin-left: 20px; }
+      body table #tFootNav #rightNavButtons #rightArrow {
+        background-image: url("../Images/tfootRightArrow.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        border: 1px inset;
+        border-color: white;
+        border-radius: 5px; }
+      body table #tFootNav #rightNavButtons #rightArrowLine {
+        background-image: url("../Images/tfootRightArrowLine.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        border: 1px inset;
+        border-color: white;
+        border-radius: 5px; }
+    body table #pageSize, body table label {
+      position: relative;
+      float: left; }
+    body table #pageSize {
+      margin-left: 20px; }
+    body table label {
+      margin-left: 100px; }
+    body table #tFootRight {
+      position: relative;
+      float: right; }
+      body table #tFootRight input {
+        background: none;
+        border: none;
+        text-align: right;
+        width: 50px; }
+
+/*# sourceMappingURL=Grid.css.map */

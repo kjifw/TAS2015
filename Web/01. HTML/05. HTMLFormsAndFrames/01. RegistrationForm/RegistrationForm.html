@@ -1,0 +1,138 @@
+﻿<!-- For task contion please refer to https://github.com/TelerikAcademy/HTML/tree/master/5.%20HTML%20Forms%20and%20Frames -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link type="text/css" rel="stylesheet" href="Styles/RegistrationForm.css" />
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit" />
+                        <input type="reset" value="Clean This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Last Name</strong>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>First Name</strong>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Address</strong>
+                    </td>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>City</strong>
+                    </td>
+                    <td>
+                        <input type="text" id="city"/>
+                        <label for="state">State</label>
+                        <input type="text" id="state"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Zip/Postal Code</strong>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Country</strong>
+                    </td>
+                    <td>
+                        <select>
+                            <option>Bulgaria</option>
+                            <option>Germany</option>
+                            <option>England</option>
+                            <option>Italy</option>
+                            <option>Spain</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Phone(country code, area code, number)</strong>
+                    </td>
+                    <td>
+                        <span>(+</span>  <input type="text" id="zipCode" /><span>)</span>
+                        <input type="text" id="areaCode"/>
+                        <input type="text" id="phoneNumber"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>E-mail</strong>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Birth date</strong>
+                    </td>
+                    <td>
+                        <input type="date" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Gender</strong>
+                    </td>
+                    <td>
+                        <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="TableHeader">
+                        <strong>Starting Date</strong>
+                    </td>
+                    <td>
+                        <input type="radio" name="StartDate" id="option1" />
+                        <label for="option1">Spring</label>
+                        <input type="radio" name="StartDate" id="option2" />
+                        <label for="option2">Summer</label>
+                    </td>
+                </tr>
+                <tr class="TableHeader">
+                    <td>
+                        <strong>Comments/Questions</strong>
+                    </td>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
