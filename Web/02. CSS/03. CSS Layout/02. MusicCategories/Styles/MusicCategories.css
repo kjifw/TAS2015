@@ -1,0 +1,46 @@
+article, header, section, div, a, h1 {
+  padding: 0;
+  margin: 0; }
+
+article {
+  width: 450px;
+  height: 580px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  background-color: #ededed;
+  padding: 1%; }
+  article section {
+    margin-bottom: 5%;
+    padding: 5%;
+    border: 1px solid #aaaaaa;
+    height: 18%;
+    background-color: white;
+    position: relative; }
+    article section:first-of-type {
+      margin-top: 5%; }
+    article section img {
+      width: 140px;
+      height: 90px;
+      float: left;
+      margin-right: 5%; }
+    article section a {
+      text-decoration: none;
+      color: black;
+      font-weight: 700; }
+    article section input {
+      position: absolute;
+      float: right;
+      bottom: 10%;
+      color: white;
+      background-image: url("../Images/buttonBackground.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20%;
+      height: 20%; }
+      article section input.add {
+        right: 5%; }
+      article section input.listen {
+        right: 26%; }
+
+/*# sourceMappingURL=MusicCategories.css.map */

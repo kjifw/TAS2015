@@ -1,0 +1,65 @@
+$element-border-color: rgb(170, 170, 170);
+
+article, header, section, div, a, h1 {
+	padding: 0;
+	margin: 0;
+}
+
+article {
+	width: 450px;
+	height: 580px;
+
+	border: 1px solid $element-border-color;
+	border-radius: 5px;
+
+	background-color: rgb(237, 237, 237);
+	padding: 1%;
+
+	section {
+		margin-bottom: 5%;
+		padding: 5%;
+		border: 1px solid $element-border-color;
+		height: 18%;
+		background-color: rgb(255, 255, 255);
+		position: relative;
+		
+		&:first-of-type {
+			margin-top: 5%;
+		}
+
+		img {
+			width: 140px;
+			height: 90px; 
+			float: left;
+			margin-right: 5%; 
+		}
+		
+		a {
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			font-weight: 700;
+		}
+		
+		input {
+			position: absolute;
+			float: right;
+			bottom: 10%;
+			color: rgb(255, 255, 255);
+			background-image: url("../Images/buttonBackground.png");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			width: 20%;
+			height: 20%;
+			
+			&.add {
+				right: 5%;
+			}
+
+			&.listen {
+				right: 26%;
+			}
+		}	
+	}
+}

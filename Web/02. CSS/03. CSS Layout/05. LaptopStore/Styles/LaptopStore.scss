@@ -1,0 +1,127 @@
+ $catalogBorder: rgb(0, 0, 0);
+
+ body, div, ul, li, a, span, fieldset, legend, img, label, input {
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+ #laptopCatalog {
+ 	margin: 40px;
+ 	width: 800px;
+ 	border: 1px solid $catalogBorder;
+ 	padding: 0 1.5% 1.5% 1.5%;
+ 	border-radius: 10px;	 	
+ 	font-family: Times New Roman;
+
+ 	#headerNav {
+ 		border-bottom: 1px solid $catalogBorder;
+ 		text-align: center;	
+
+ 		ul {
+ 			list-style-type: none;
+ 			padding: 1%;
+
+ 			li {
+ 				display: inline-block;
+ 				font-size: 1.6em;
+ 				font-weight: 700;
+
+ 				a { 					
+ 					color: rgb(1, 171, 236);
+ 				}
+ 			}
+ 		}
+ 	}
+
+ 	#content {
+ 		border: 1px solid $catalogBorder;
+ 		width: 58%;
+ 		display: inline-block;
+ 		margin: 1.5% 0 0 0;
+ 		padding: 1.5%;
+
+ 		fieldset {
+ 			border: 1px solid $catalogBorder;
+
+ 			legend {
+ 				margin:0 20% 0 20%;	
+ 			}
+
+ 			&.LeftColumn {
+ 				width: 49%;
+ 				float: left;
+ 			}
+
+ 			&.RightColumn {
+ 				width: 49%;
+ 				float: right;
+ 			}
+
+ 			img {
+ 				width: 140px;
+ 				height: 80px;
+ 				float: left;
+ 			}
+
+ 			span {
+ 				float: left;
+				text-align: center;
+
+				&.LaptopSsd {
+					margin: 4% 2% 4% 2%;
+				}
+
+				&.LaptopRam {
+					@extend .LaptopSsd;
+				}
+
+				&.LaptopProcessor {
+					@extend .LaptopSsd;
+					float: right;
+				}
+
+ 				&.LaptopPrice {
+ 					margin: 3% 2% 4% 20%;
+ 				}
+ 			}
+ 			
+ 		}
+ 	}
+
+ 	#catalogSliders {
+ 		width: 38%;
+ 		float: right;		
+ 		display: inline-block;
+
+ 		margin-top: 15%; 
+
+ 		#priceSliders {
+ 			width: 98%;
+
+
+ 			.LeftSliderInfo {
+ 				float: left;
+ 				margin: 0 5% 2% 5%;
+ 			}
+
+ 			.RightSliderInfo {
+ 				float: right;			
+ 				margin: 0 5% 2% 5%;
+ 			}
+
+ 			.MinSlider {
+ 				width: 90%;
+ 				margin: 0 0 0 5%;
+ 			}
+
+ 			.MaxSlider {
+ 				width: 90%;
+ 				margin: 0 0 0 5%;
+ 			}
+ 		}
+
+ 		#ramSliders {
+ 			@extend #priceSliders;
+ 		}
+ 	}
+ }

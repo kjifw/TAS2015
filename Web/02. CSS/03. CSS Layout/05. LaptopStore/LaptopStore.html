@@ -1,0 +1,101 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/CSS/tree/master/3.%20CSS%20Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laptop Store</title>
+	<link rel="stylesheet" type="text/css" href="Styles/LaptopStore.css" />
+</head>
+<body>
+	<div id="laptopCatalog">
+		<div id="headerNav">
+			<ul>
+				<li><a href="#">Apple</a></li>
+				<li><a href="#">Toshiba</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Dell</a></li>
+				<li><a href="#">Asus</a></li>
+				<li><a href="#">Hacer</a></li>
+				<li><a href="#">HP</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<fieldset class="LeftColumn">
+				<legend>Apple MacBook Air</legend>
+				<img src="Images/laptop.png" alt="laptop image" />
+				<span class="LaptopSsd">64 GB SSD</span>
+				<span class="LaptopRam">2GB DDR</span>
+				<span class="LaptopProcessor">Intel Core i5</span>
+				<span class="LaptopPrice">1300 USD</span>
+			</fieldset>
+			<fieldset class="RightColumn">
+				<legend>Apple MacBook Air</legend>
+				<div>
+					<img src="Images/laptop.png" alt="laptop image" />
+					<span class="LaptopSsd">64 GB SSD</span>
+					<span class="LaptopRam">2GB DDR</span>
+					<span class="LaptopProcessor">Intel Core i5</span>
+					<span class="LaptopPrice">1300 USD</span>
+				</div>
+			</fieldset>
+			<fieldset class="LeftColumn">
+				<legend>Apple MacBook Air</legend>
+				<div>
+					<img src="Images/laptop.png" alt="laptop image" />
+					<span class="LaptopSsd">64 GB SSD</span>
+					<span class="LaptopRam">2GB DDR</span>
+					<span class="LaptopProcessor">Intel Core i5</span>
+					<span class="LaptopPrice">1300 USD</span>
+				</div>
+			</fieldset>
+			<fieldset class="RightColumn">
+				<legend>Apple MacBook Air</legend>
+				<div>
+					<img src="Images/laptop.png" alt="laptop image" />
+					<span class="LaptopSsd">64 GB SSD</span>
+					<span class="LaptopRam">2GB DDR</span>
+					<span class="LaptopProcessor">Intel Core i5</span>
+					<span class="LaptopPrice">1300 USD</span>
+				</div>
+			</fieldset>
+			<fieldset class="LeftColumn">
+				<legend>Apple MacBook Air</legend>
+				<div>
+					<img src="Images/laptop.png" alt="laptop image" />
+					<span class="LaptopSsd">64 GB SSD</span>
+					<span class="LaptopRam">2GB DDR</span>
+					<span class="LaptopProcessor">Intel Core i5</span>
+					<span class="LaptopPrice">1300 USD</span>
+				</div>
+			</fieldset>
+			<fieldset class="RightColumn">
+				<legend>Apple MacBook Air</legend>
+				<div>
+					<img src="Images/laptop.png" alt="laptop image" />
+					<span class="LaptopSsd">64 GB SSD</span>
+					<span class="LaptopRam">2GB DDR</span>
+					<span class="LaptopProcessor">Intel Core i5</span>
+					<span class="LaptopPrice">1300 USD</span>
+				</div>
+			</fieldset>
+		</div>
+		<div id="catalogSliders">
+			<div id="priceSliders">
+				<label for="minPrice" class="LeftSliderInfo">Min Price: </label>
+				<label for="minPrice" class="RightSliderInfo">500 USD</label>
+				<input type="range" id="minPrice" class="MinSlider" min="500" max="1500" step="10" />
+				<label for="maxPrice" class="LeftSliderInfo">Max Price: </label>
+				<label for="maxPrice" class="RightSliderInfo">1500 USD</label>
+				<input type="range" id="maxPrice" class="MaxSlider" min="500" max="1500" step="10" />
+			</div>
+			<div id="ramSliders">
+				<label for="minRam" class="LeftSliderInfo">Min RAM: </label>
+				<label for="minRam" class="RightSliderInfo">4 GB</label>
+				<input type="range" id="minRam" class="MinSlider" min="4" max="16" step="1" />
+				<label for="maxRam" class="LeftSliderInfo">Max RAM: </label>
+				<label for="maxRam" class="RightSliderInfo">16 GB</label>
+				<input type="range" id="maxRam" class="MaxSlider" min="4" max="16" step="1" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

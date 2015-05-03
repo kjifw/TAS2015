@@ -1,0 +1,73 @@
+body, div, ul, li, a, span, fieldset, legend, img, label, input {
+  padding: 0;
+  margin: 0; }
+
+#laptopCatalog {
+  margin: 40px;
+  width: 800px;
+  border: 1px solid black;
+  padding: 0 1.5% 1.5% 1.5%;
+  border-radius: 10px;
+  font-family: Times New Roman; }
+  #laptopCatalog #headerNav {
+    border-bottom: 1px solid black;
+    text-align: center; }
+    #laptopCatalog #headerNav ul {
+      list-style-type: none;
+      padding: 1%; }
+      #laptopCatalog #headerNav ul li {
+        display: inline-block;
+        font-size: 1.6em;
+        font-weight: 700; }
+        #laptopCatalog #headerNav ul li a {
+          color: #01abec; }
+  #laptopCatalog #content {
+    border: 1px solid black;
+    width: 58%;
+    display: inline-block;
+    margin: 1.5% 0 0 0;
+    padding: 1.5%; }
+    #laptopCatalog #content fieldset {
+      border: 1px solid black; }
+      #laptopCatalog #content fieldset legend {
+        margin: 0 20% 0 20%; }
+      #laptopCatalog #content fieldset.LeftColumn {
+        width: 49%;
+        float: left; }
+      #laptopCatalog #content fieldset.RightColumn {
+        width: 49%;
+        float: right; }
+      #laptopCatalog #content fieldset img {
+        width: 140px;
+        height: 80px;
+        float: left; }
+      #laptopCatalog #content fieldset span {
+        float: left;
+        text-align: center; }
+        #laptopCatalog #content fieldset span.LaptopSsd, #laptopCatalog #content fieldset span.LaptopRam, #laptopCatalog #content fieldset span.LaptopProcessor {
+          margin: 4% 2% 4% 2%; }
+        #laptopCatalog #content fieldset span.LaptopProcessor {
+          float: right; }
+        #laptopCatalog #content fieldset span.LaptopPrice {
+          margin: 3% 2% 4% 20%; }
+  #laptopCatalog #catalogSliders {
+    width: 38%;
+    float: right;
+    display: inline-block;
+    margin-top: 15%; }
+    #laptopCatalog #catalogSliders #priceSliders, #laptopCatalog #catalogSliders #ramSliders {
+      width: 98%; }
+      #laptopCatalog #catalogSliders #priceSliders .LeftSliderInfo, #laptopCatalog #catalogSliders #ramSliders .LeftSliderInfo {
+        float: left;
+        margin: 0 5% 2% 5%; }
+      #laptopCatalog #catalogSliders #priceSliders .RightSliderInfo, #laptopCatalog #catalogSliders #ramSliders .RightSliderInfo {
+        float: right;
+        margin: 0 5% 2% 5%; }
+      #laptopCatalog #catalogSliders #priceSliders .MinSlider, #laptopCatalog #catalogSliders #ramSliders .MinSlider {
+        width: 90%;
+        margin: 0 0 0 5%; }
+      #laptopCatalog #catalogSliders #priceSliders .MaxSlider, #laptopCatalog #catalogSliders #ramSliders .MaxSlider {
+        width: 90%;
+        margin: 0 0 0 5%; }
+
+/*# sourceMappingURL=LaptopStore.css.map */
