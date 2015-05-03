@@ -1,0 +1,25 @@
+label {
+	img {
+		width: 120px;
+		height: 70px;
+
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+input[type="radio"] {
+	display: none;
+
+	&:checked + label {
+		img {
+			&.hidden {
+				display: block;
+				position: absolute;
+				width: 600px;
+				height: 400px;
+			}
+		}
+	}
+}

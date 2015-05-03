@@ -1,0 +1,261 @@
+body, div, input, ul, li, a, table, thead, tfoot, tbody, tr, td, th {
+  padding: 0;
+  margin: 0; }
+
+body {
+  padding: 20px; }
+
+#calculator {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #8797aa;
+  border-radius: 10px;
+  padding: 0 0.5% 0.5% 0.5%;
+  color: #2b4562;
+  background-color: #beddfb; }
+  #calculator #calculatorHeader {
+    margin: 0 1% 1% 1%;
+    height: 5%;
+    padding-bottom: 1%;
+    color: black; }
+    #calculator #calculatorHeader #calculatorLogo {
+      padding-top: 1%;
+      float: left; }
+      #calculator #calculatorHeader #calculatorLogo img {
+        width: 15px;
+        height: 20px;
+        float: left;
+        margin-right: 5px; }
+    #calculator #calculatorHeader #calculatorButtons {
+      float: right;
+      width: 20%; }
+      #calculator #calculatorHeader #calculatorButtons input {
+        float: left;
+        border: 1px solid #8797aa; }
+        #calculator #calculatorHeader #calculatorButtons input#minimize {
+          background-image: url("../Images/minimize.png"), -moz-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/minimize.png"), -webkit-gradient(linear, left top, left bottom, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/minimize.png"), -webkit-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/minimize.png"), -o-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/minimize.png"), -ms-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/minimize.png"), linear-gradient(to bottom, #e1ebf5 0%, #a3b6cc 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+          width: 30%;
+          border-bottom-left-radius: 6px; }
+          #calculator #calculatorHeader #calculatorButtons input#minimize:hover {
+            background-image: url("../Images/minimize.png"), -moz-linear-gradient(top, #b6d8f0 0%, #1a6ea7 100%);
+            background-image: url("../Images/minimize.png"), -webkit-gradient(linear, left top, left bottom, #b6d8f0 0%, #1a6ea7 100%);
+            background-image: url("../Images/minimize.png"), -webkit-linear-gradient(top, #b6d8f0 0%, #1a6ea7 100%);
+            background-image: url("../Images/minimize.png"), -o-linear-gradient(top, #b6d8f0 0%, #1a6ea7 100%);
+            background-image: url("../Images/minimize.png"), -ms-linear-gradient(top, #b6d8f0 0%, #1a6ea7 100%);
+            background-image: url("../Images/minimize.png"), linear-gradient(to bottom, #b6d8f0 0%, #1a6ea7 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+        #calculator #calculatorHeader #calculatorButtons input#maximize {
+          background-image: url("../Images/maximize.png"), -moz-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/maximize.png"), -webkit-gradient(linear, left top, left bottom, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/maximize.png"), -webkit-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/maximize.png"), -o-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/maximize.png"), -ms-linear-gradient(top, #e1ebf5 0%, #a3b6cc 100%);
+          background-image: url("../Images/maximize.png"), linear-gradient(to bottom, #e1ebf5 0%, #a3b6cc 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+          width: 30%; }
+        #calculator #calculatorHeader #calculatorButtons input#close {
+          background-image: url("../Images/close.png"), -moz-linear-gradient(top, #e5ada6 0%, #d04834 100%);
+          background-image: url("../Images/close.png"), -webkit-gradient(linear, left top, left bottom, #e5ada6 0%, #d04834 100%);
+          background-image: url("../Images/close.png"), -webkit-linear-gradient(top, #e5ada6 0%, #d04834 100%);
+          background-image: url("../Images/close.png"), -o-linear-gradient(top, #e5ada6 0%, #d04834 100%);
+          background-image: url("../Images/close.png"), -ms-linear-gradient(top, #e5ada6 0%, #d04834 100%);
+          background-image: url("../Images/close.png"), linear-gradient(to bottom, #e5ada6 0%, #d04834 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 40%;
+          border-bottom-right-radius: 6px; }
+          #calculator #calculatorHeader #calculatorButtons input#close:hover {
+            background-image: url("../Images/close.png"), -moz-linear-gradient(top, #ee998b 0%, #aa210c 100%);
+            background-image: url("../Images/close.png"), -webkit-gradient(linear, left top, left bottom, #ee998b 0%, #aa210c 100%);
+            background-image: url("../Images/close.png"), -webkit-linear-gradient(top, #ee998b 0%, #aa210c 100%);
+            background-image: url("../Images/close.png"), -o-linear-gradient(top, #ee998b 0%, #aa210c 100%);
+            background-image: url("../Images/close.png"), -ms-linear-gradient(top, #ee998b 0%, #aa210c 100%);
+            background-image: url("../Images/close.png"), linear-gradient(to bottom, #ee998b 0%, #aa210c 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+  #calculator #calculatorBody {
+    height: 92%;
+    border: 1px solid #8797aa;
+    background: -moz-linear-gradient(top, #edf4fc 7%, #d9e4f1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, #edf4fc 7%, #d9e4f1 100%);
+    background: -webkit-linear-gradient(top, #edf4fc 7%, #d9e4f1 100%);
+    background: -o-linear-gradient(top, #edf4fc 7%, #d9e4f1 100%);
+    background: -ms-linear-gradient(top, #edf4fc 7%, #d9e4f1 100%);
+    background: linear-gradient(to bottom, #edf4fc 7%, #d9e4f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+    background-color: #d9e4f1; }
+    #calculator #calculatorBody #calculatorNav {
+      border-bottom: 1px solid #8797aa;
+      height: 7%;
+      background: -moz-linear-gradient(top, #fbfcfe 0%, #d6ddef 100%);
+      background: -webkit-gradient(linear, left top, left bottom, #fbfcfe 0%, #d6ddef 100%);
+      background: -webkit-linear-gradient(top, #fbfcfe 0%, #d6ddef 100%);
+      background: -o-linear-gradient(top, #fbfcfe 0%, #d6ddef 100%);
+      background: -ms-linear-gradient(top, #fbfcfe 0%, #d6ddef 100%);
+      background: linear-gradient(to bottom, #fbfcfe 0%, #d6ddef 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+      #calculator #calculatorBody #calculatorNav ul {
+        list-style-type: none; }
+        #calculator #calculatorBody #calculatorNav ul li {
+          float: left;
+          margin: 5px; }
+          #calculator #calculatorBody #calculatorNav ul li a {
+            text-decoration: none;
+            color: black; }
+          #calculator #calculatorBody #calculatorNav ul li:hover {
+            margin: 4px;
+            border: 1px solid #8797aa; }
+    #calculator #calculatorBody input#calculatorDisplay {
+      margin: 2%;
+      width: 95%;
+      height: 10%;
+      text-align: right;
+      font-size: 1.2em;
+      border: 1px solid #8797aa;
+      background: -moz-linear-gradient(top, #e5eeff 0%, white 100%);
+      background: -webkit-gradient(linear, left top, left bottom, #e5eeff 0%, white 100%);
+      background: -webkit-linear-gradient(top, #e5eeff 0%, white 100%);
+      background: -o-linear-gradient(top, #e5eeff 0%, white 100%);
+      background: -ms-linear-gradient(top, #e5eeff 0%, white 100%);
+      background: linear-gradient(to bottom, #e5eeff 0%, white 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+    #calculator #calculatorBody table {
+      width: 95%;
+      margin: 0 0 2% 2%;
+      padding: 1%;
+      border: 1px solid #8797aa;
+      color: #2b4562; }
+      #calculator #calculatorBody table tr td {
+        color: #606c82; }
+        #calculator #calculatorBody table tr td a {
+          text-decoration: none; }
+          #calculator #calculatorBody table tr td a:visited {
+            color: #2b4562; }
+        #calculator #calculatorBody table tr td:nth-child(4n) {
+          padding-right: 20px; }
+        #calculator #calculatorBody table tr td:last-child {
+          padding-right: 0; }
+      #calculator #calculatorBody table tr:nth-child(2n) td:last-child {
+        text-align: right; }
+    #calculator #calculatorBody #numeralSystem, #calculator #calculatorBody #dataUnit {
+      border: 1px solid #8797aa;
+      width: 15%;
+      height: 22%;
+      padding: 1%;
+      margin: 0 0 2% 2%;
+      float: left; }
+      #calculator #calculatorBody #numeralSystem input, #calculator #calculatorBody #dataUnit input {
+        float: left;
+        width: 40%;
+        margin-top: 5%; }
+        #calculator #calculatorBody #numeralSystem input + label, #calculator #calculatorBody #dataUnit input + label {
+          display: block;
+          margin: 0 0 7% 0; }
+    #calculator #calculatorBody #calculatorPad {
+      float: right;
+      width: 75%;
+      height: 52%;
+      margin-right: 3%;
+      padding: 0;
+      border: none; }
+      #calculator #calculatorBody #calculatorPad td {
+        width: 12%;
+        height: 12%;
+        padding: 0;
+        text-align: center; }
+        #calculator #calculatorBody #calculatorPad td input {
+          width: 92%;
+          height: 92%;
+          border: 1px solid #8797aa;
+          border-radius: 3px;
+          color: #2b4562;
+          background: -moz-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+          background: -webkit-gradient(linear, left top, left bottom, #eef4fa 0%, #d5e0ee 100%);
+          background: -webkit-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+          background: -o-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+          background: -ms-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+          background: linear-gradient(to bottom, #eef4fa 0%, #d5e0ee 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+          #calculator #calculatorBody #calculatorPad td input#returnSign {
+            background-image: url("../Images/backButtonArrow.png"), -moz-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/backButtonArrow.png"), -webkit-gradient(linear, left top, left bottom, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/backButtonArrow.png"), -webkit-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/backButtonArrow.png"), -o-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/backButtonArrow.png"), -ms-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/backButtonArrow.png"), linear-gradient(to bottom, #eef4fa 0%, #d5e0ee 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+            background-position: center;
+            background-repeat: no-repeat; }
+            #calculator #calculatorBody #calculatorPad td input#returnSign:hover {
+              background-image: url("../Images/backButtonArrow.png"), -moz-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/backButtonArrow.png"), -webkit-gradient(linear, left top, left bottom, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/backButtonArrow.png"), -webkit-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/backButtonArrow.png"), -o-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/backButtonArrow.png"), -ms-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/backButtonArrow.png"), linear-gradient(to bottom, #fef0e0 0%, #fbd27a 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+          #calculator #calculatorBody #calculatorPad td input#plusMinusSign {
+            background-image: url("../Images/plusMinusSign.png"), -moz-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/plusMinusSign.png"), -webkit-gradient(linear, left top, left bottom, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/plusMinusSign.png"), -webkit-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/plusMinusSign.png"), -o-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/plusMinusSign.png"), -ms-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/plusMinusSign.png"), linear-gradient(to bottom, #eef4fa 0%, #d5e0ee 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+            background-position: center;
+            background-repeat: no-repeat; }
+            #calculator #calculatorBody #calculatorPad td input#plusMinusSign:hover {
+              background-image: url("../Images/plusMinusSign.png"), -moz-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/plusMinusSign.png"), -webkit-gradient(linear, left top, left bottom, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/plusMinusSign.png"), -webkit-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/plusMinusSign.png"), -o-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/plusMinusSign.png"), -ms-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/plusMinusSign.png"), linear-gradient(to bottom, #fef0e0 0%, #fbd27a 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+          #calculator #calculatorBody #calculatorPad td input#rootSign {
+            background-image: url("../Images/rootSign.png"), -moz-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/rootSign.png"), -webkit-gradient(linear, left top, left bottom, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/rootSign.png"), -webkit-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/rootSign.png"), -o-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/rootSign.png"), -ms-linear-gradient(top, #eef4fa 0%, #d5e0ee 100%);
+            background-image: url("../Images/rootSign.png"), linear-gradient(to bottom, #eef4fa 0%, #d5e0ee 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+            background-position: center;
+            background-repeat: no-repeat; }
+            #calculator #calculatorBody #calculatorPad td input#rootSign:hover {
+              background-image: url("../Images/rootSign.png"), -moz-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/rootSign.png"), -webkit-gradient(linear, left top, left bottom, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/rootSign.png"), -webkit-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/rootSign.png"), -o-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/rootSign.png"), -ms-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+              background-image: url("../Images/rootSign.png"), linear-gradient(to bottom, #fef0e0 0%, #fbd27a 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+            #calculator #calculatorBody #calculatorPad td input#rootSign[disabled=disabled] {
+              background-image: url("../Images/rootSign.png"), -moz-linear-gradient(top, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              background-image: url("../Images/rootSign.png"), -webkit-gradient(linear, left top, left bottom, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              background-image: url("../Images/rootSign.png"), -webkit-linear-gradient(top, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              background-image: url("../Images/rootSign.png"), -o-linear-gradient(top, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              background-image: url("../Images/rootSign.png"), -ms-linear-gradient(top, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              background-image: url("../Images/rootSign.png"), linear-gradient(to bottom, rgba(238, 244, 250, 0) 0%, rgba(213, 224, 238, 0) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+          #calculator #calculatorBody #calculatorPad td input.mainKeypad {
+            background: none;
+            background-color: #f3f8fc; }
+          #calculator #calculatorBody #calculatorPad td input[disabled=disabled] {
+            background: transparent; }
+          #calculator #calculatorBody #calculatorPad td input:hover:not([disabled]) {
+            background: -moz-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+            background: -webkit-gradient(linear, left top, left bottom, #fef0e0 0%, #fbd27a 100%);
+            background: -webkit-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+            background: -o-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+            background: -ms-linear-gradient(top, #fef0e0 0%, #fbd27a 100%);
+            background: linear-gradient(to bottom, #fef0e0 0%, #fbd27a 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+
+/*# sourceMappingURL=WindowsCalculator.css.map */

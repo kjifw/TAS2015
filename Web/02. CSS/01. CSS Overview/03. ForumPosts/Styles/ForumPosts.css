@@ -1,0 +1,31 @@
+body {
+  background-image: url("../Images/bodyBackground.jpg");
+  background-color: #a8a8a8;
+  font-family: "Times New Roman", Georgia, Serif; }
+  body > header {
+    text-align: center;
+    font-size: 20px;
+    color: white; }
+    body > header ul {
+      list-style-type: none;
+      font-weight: 600; }
+      body > header ul a {
+        text-decoration: none;
+        color: white; }
+        body > header ul a:hover {
+          text-decoration: underline; }
+        body > header ul a.current {
+          background-image: url("../Images/currentAnchorBackground.jpg");
+          background-color: #d2d2d2; }
+  body footer {
+    text-align: center; }
+  body article header {
+    text-align: left;
+    color: white; }
+  body article footer {
+    text-align: left; }
+    body article footer a {
+      text-decoration: none;
+      color: black; }
+
+/*# sourceMappingURL=ForumPosts.css.map */

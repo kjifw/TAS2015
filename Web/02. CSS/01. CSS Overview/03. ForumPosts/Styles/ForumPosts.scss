@@ -1,0 +1,51 @@
+body {
+	background-image: url("../Images/bodyBackground.jpg");
+	background-color: rgb(168, 168, 168);
+	
+	font-family: "Times New Roman", Georgia, Serif;;
+
+	> header {
+		text-align: center;
+		font-size: 20px;
+		color: rgb(255, 255, 255);
+		
+		ul {
+			list-style-type: none;
+			font-weight: 600;
+
+			a {
+				text-decoration: none;
+				color: rgb(255, 255, 255);
+
+				&:hover {
+					text-decoration: underline;
+				}				
+
+				&.current {
+					background-image: url("../Images/currentAnchorBackground.jpg");
+					background-color: rgb(210, 210, 210);
+				}
+			} 
+		}
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	article {
+		header {
+			text-align: left;
+			color: rgb(255, 255, 255);
+		}
+
+		footer {
+			text-align: left;
+
+			a {
+				text-decoration: none;
+				color: rgb(0, 0, 0);
+			}
+		}
+	}
+}

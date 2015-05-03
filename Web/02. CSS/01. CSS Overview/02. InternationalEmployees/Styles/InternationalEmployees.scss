@@ -1,0 +1,78 @@
+@mixin background-image-size($size) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
+
+@mixin left-right-border($color) {
+	border-left: 1px solid $color;
+	border-right: 1px solid $color;
+}
+
+$border-color: rgb(170, 170, 170);
+
+table {
+	border-collapse: collapse;
+	font-family: Arial;
+
+	tr {
+		height: 30px;
+
+		&:nth-child(2n) {
+			background-color: rgb(235, 235, 216);
+			background-image: url("../Images/evenRowBackground.jpg");
+			background-position: center;
+			@include background-image-size(cover);
+		}
+		
+		&:first-of-type {
+			border-top: 1px solid $border-color;
+		}
+
+		&:last-of-type {
+			border-bottom: 1px solid $border-color;
+		}
+
+		th {
+			background-color: rgb(84, 184, 22);
+			background-image: url("../Images/thBackground.jpg");
+			background-position: center;
+			@include background-image-size(cover);
+
+			@include left-right-border($border-color);
+
+			padding: 5px;
+			color: rgb(255, 255, 255);
+			text-align: left;			
+		}
+
+		td {
+			padding: 5px;
+
+			@include left-right-border($border-color);
+			
+			img {
+				width: 25px;
+				float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.contactName { 
+		width: 180px;
+	}
+
+	.contactCity {
+		width: 180px;
+	}
+
+	.contactCountry {
+		width: 180px;
+	}
+
+	.isPromoted {
+		width: 120px;
+	}
+}

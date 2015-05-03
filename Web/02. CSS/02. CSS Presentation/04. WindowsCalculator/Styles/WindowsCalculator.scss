@@ -1,0 +1,282 @@
+$calculator-border-color: rgb(135, 151, 170);
+$calculator-color: rgb(43, 69, 98);
+
+@mixin linear-gradient($from-color, $to-color, $from-pos, $to-pos) 
+{
+	background: -moz-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -webkit-gradient(linear, left top, left bottom, $from-color $from-pos, $to-color $to-pos);	
+	background: -webkit-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -o-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -ms-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: linear-gradient(to bottom, $from-color $from-pos, $to-color $to-pos);	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+}	
+
+@mixin linear-gradient-image($from-color, $to-color, $from-pos, $to-pos, $url-to-image) 
+{
+	background-image: url($url-to-image), -moz-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background-image: url($url-to-image), -webkit-gradient(linear, left top, left bottom, $from-color $from-pos, $to-color $to-pos);	
+	background-image: url($url-to-image), -webkit-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background-image: url($url-to-image), -o-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background-image: url($url-to-image), -ms-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background-image: url($url-to-image), linear-gradient(to bottom, $from-color $from-pos, $to-color $to-pos);	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+}	
+
+body, div, input, ul, li, a, table, thead, tfoot, tbody, tr, td, th {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 20px;
+}
+
+#calculator {
+	width: 500px;
+	height: 500px;
+	border: 1px solid $calculator-border-color;
+	border-radius: 10px;
+	padding: 0 0.5% 0.5% 0.5%;
+	color: $calculator-color;
+	background-color: rgb(190, 221, 251);
+	
+	#calculatorHeader {
+		margin: 0 1% 1% 1%;
+		height: 5%;
+		padding-bottom: 1%;
+		color: rgb(0, 0, 0);
+		
+		#calculatorLogo {
+			padding-top: 1%;
+			float: left;
+
+			img {
+				width: 15px;
+				height: 20px;
+				float: left;
+				margin-right: 5px;
+			}
+		}
+
+		#calculatorButtons {
+			float: right;
+			width: 20%;
+
+			input {					
+				float: left;
+				border: 1px solid $calculator-border-color;
+
+				&#minimize {
+					@include linear-gradient-image(rgb(225, 235, 245), rgb(163, 182, 204), 0%, 100%, "../Images/minimize.png");
+					width: 30%;
+					border-bottom-left-radius: 6px;
+
+					&:hover {
+						@include linear-gradient-image(rgb(182, 216, 240), rgb(26, 110, 167), 0%, 100%, "../Images/minimize.png");
+					}
+				}
+
+				&#maximize {
+					@include linear-gradient-image(rgb(225, 235, 245), rgb(163, 182, 204), 0%, 100%, "../Images/maximize.png");
+					width: 30%;
+				}
+				
+				&#close {
+					@include linear-gradient-image(rgb(229, 173, 166), rgb(208, 72, 52), 0%, 100%, "../Images/close.png");
+					background-position: center;
+					background-repeat: no-repeat;
+					width: 40%;
+					border-bottom-right-radius: 6px;
+
+					&:hover {
+						@include linear-gradient-image(rgb(238, 153, 139), rgb(170, 33, 12), 0%, 100%, "../Images/close.png");
+					}
+				}
+			}
+		}
+	}
+
+	#calculatorBody {
+		height: 92%;
+		border: 1px solid $calculator-border-color;
+		@include linear-gradient(rgb(237, 244, 252), rgb(217, 228, 241), 7%, 100%);
+		background-color: rgb(217, 228, 241);
+
+		#calculatorNav {
+			border-bottom: 1px solid $calculator-border-color;
+			height: 7%;
+			@include linear-gradient(rgb(251, 252, 254), rgb(214, 221, 239), 0%, 100%);
+			
+			ul {
+				list-style-type: none;
+
+				li {
+					float: left;
+					margin: 5px; 
+
+					a {
+						text-decoration: none;
+						color: rgb(0, 0, 0);
+					}
+
+					&:hover {
+						margin: 4px;
+						border: 1px solid $calculator-border-color;
+					}
+				}
+			}
+		}
+		
+		input {
+			&#calculatorDisplay{
+				margin: 2%;
+				width: 95%;	
+				height: 10%;
+				text-align: right;
+				font-size: 1.2em;
+				border: 1px solid $calculator-border-color;
+
+				@include linear-gradient(rgb(229, 238, 255), rgb(255, 255, 255), 0%, 100%);
+			}
+		}
+
+		table {			
+			width: 95%;
+			margin: 0 0 2% 2%;
+			padding: 1%;
+
+			border: 1px solid $calculator-border-color;
+			color: $calculator-color;
+
+			tr {
+				td {
+					color: rgb(96, 108, 130);
+
+					a {
+						text-decoration: none;
+
+						&:visited {
+							color: $calculator-color;
+						}
+					}
+
+					&:nth-child(4n) {
+						padding-right: 20px;
+					}	
+
+					&:last-child {
+						padding-right: 0;
+					}
+				}
+
+				&:nth-child(2n) {
+					td {
+						&:last-child {
+							text-align: right;
+						}
+					}
+				}
+			}
+		}
+
+		#numeralSystem {
+			border: 1px solid $calculator-border-color;
+			width: 15%;
+			height: 22%;
+			padding: 1%;
+			margin: 0 0 2% 2%;
+			float: left;
+
+			input {
+				float: left;
+				width: 40%;
+				margin-top: 5%;
+				
+				&+label {
+					display: block;
+					margin: 0 0 7% 0;
+				}
+			}
+		}
+
+		#dataUnit {
+			@extend #numeralSystem;
+		}
+
+		#calculatorPad {
+			float: right;
+			width: 75%;
+			height: 52%;
+			margin-right: 3%;
+			padding: 0;
+			border: none;
+
+			td {
+				width: 12%;
+				height: 12%;
+				padding: 0;
+				text-align: center;
+
+				input {
+					width: 92%;
+					height: 92%;
+					border: 1px solid $calculator-border-color;
+					border-radius: 3px;	
+					color: $calculator-color;
+					
+					@include linear-gradient(rgb(238, 244, 250), rgb(213, 224, 238), 0%, 100%);
+
+					&#returnSign {
+						@include linear-gradient-image(rgb(238, 244, 250), rgb(213, 224, 238), 0%, 100%, "../Images/backButtonArrow.png");
+						background-position: center;
+						background-repeat: no-repeat;
+
+						&:hover {
+							@include linear-gradient-image(rgb(254, 240, 224), rgb(251, 210, 122), 0%, 100%, "../Images/backButtonArrow.png");
+						}
+					}
+					
+					&#plusMinusSign {
+						@include linear-gradient-image(rgb(238, 244, 250), rgb(213, 224, 238), 0%, 100%, "../Images/plusMinusSign.png");
+						background-position: center;
+						background-repeat: no-repeat;
+
+						&:hover {
+							@include linear-gradient-image(rgb(254, 240, 224), rgb(251, 210, 122), 0%, 100%, "../Images/plusMinusSign.png");
+						}
+					}
+					
+					&#rootSign {
+						@include linear-gradient-image(rgb(238, 244, 250), rgb(213, 224, 238), 0%, 100%, "../Images/rootSign.png");						
+						background-position: center;
+						background-repeat: no-repeat;
+
+						&:hover {
+							@include linear-gradient-image(rgb(254, 240, 224), rgb(251, 210, 122), 0%, 100%, "../Images/rootSign.png");
+						}
+
+						&[disabled=disabled] {
+							@include linear-gradient-image(rgba(238, 244, 250, 0), rgba(213, 224, 238, 0), 0%, 100%, "../Images/rootSign.png");		
+						}
+					}
+					
+					&.mainKeypad {
+						background: none;
+						background-color: rgb(243, 248, 252);
+					}
+
+					&[disabled=disabled] {
+						background: rgba(0, 0, 0, 0);
+					}
+
+					&:hover {
+						&:not([disabled]) {
+							@include linear-gradient(rgb(254, 240, 224), rgb(251, 210, 122), 0%, 100%);
+						}
+					}
+				}					
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+label img {
+  width: 120px;
+  height: 70px; }
+  label img.Hidden {
+    display: none; }
+
+input[type="radio"] {
+  display: none; }
+  input[type="radio"]:checked + label img.Hidden {
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 400px; }
+
+/*# sourceMappingURL=WebGallery.css.map */

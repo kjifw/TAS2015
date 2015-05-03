@@ -1,0 +1,48 @@
+table {
+  border-collapse: collapse;
+  font-family: Arial; }
+  table tr {
+    height: 30px; }
+    table tr:nth-child(2n) {
+      background-color: #ebebd8;
+      background-image: url("../Images/evenRowBackground.jpg");
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    table tr:first-of-type {
+      border-top: 1px solid #aaaaaa; }
+    table tr:last-of-type {
+      border-bottom: 1px solid #aaaaaa; }
+    table tr th {
+      background-color: #54b816;
+      background-image: url("../Images/thBackground.jpg");
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      border-left: 1px solid #aaaaaa;
+      border-right: 1px solid #aaaaaa;
+      padding: 5px;
+      color: white;
+      text-align: left; }
+    table tr td {
+      padding: 5px;
+      border-left: 1px solid #aaaaaa;
+      border-right: 1px solid #aaaaaa; }
+      table tr td img {
+        width: 25px;
+        float: left;
+        margin-right: 10px; }
+  table .contactName {
+    width: 180px; }
+  table .contactCity {
+    width: 180px; }
+  table .contactCountry {
+    width: 180px; }
+  table .isPromoted {
+    width: 120px; }
+
+/*# sourceMappingURL=InternationalEmployees.css.map */

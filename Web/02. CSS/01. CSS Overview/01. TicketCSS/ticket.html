@@ -1,0 +1,51 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/CSS/tree/master/1.%20CSS%20Overview -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket CSS</title>
+	<link rel="stylesheet" type="text/css" href="Styles/ticket.css">
+</head>
+<body>
+	<div id="ticketDiv">
+		<label for="ticket" id="ticketLabel">Ticket ID: </label>
+		<input type="text" id="ticket" value="409788" readonly="readonly" />
+	</div>
+	<dl>
+		<dt>
+			Name: 
+		</dt>
+		<dd id="ticketOwnerName">
+			<div id="nameCustomBullet"></div>
+			Parker Seidel
+			<br />
+			<span id="active">No Active Support</span>
+		</dd>
+		<dt>
+			Email:	
+		</dt>
+		<dd>
+			<a href="mailto:seidel@aptmail.com">seidel@aptmail.com</a>
+		</dd>
+		<dt>
+			Response Time: 
+		</dt>
+		<dd id="responceTime">
+			72hours, 60hours left
+		</dd>
+		<dt>
+			Last Action:
+		</dt>
+		<dd id="lastAction">
+			Never been locked. 
+			<br />
+			<a href="#" id="publicLink">Link to public post</a>
+		</dd>
+		<dt>
+			Status:
+		</dt>
+		<dd id="status">
+			Not answered
+		</dd>
+	</dl>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+  background-color: #585858; }
+  body a {
+    text-decoration: none;
+    color: #fef1b3; }
+  body div#ticketDiv label#ticketLabel, body div#ticketDiv input {
+    color: #acb9a9;
+    font-size: 30px; }
+  body div#ticketDiv input {
+    border: none;
+    background-color: transparent; }
+  body dl {
+    line-height: 40px;
+    font-size: 20px; }
+    body dl dt {
+      float: left;
+      width: 180px;
+      color: white;
+      font-style: oblique;
+      font-weight: 600; }
+    body dl dd#ticketOwnerName {
+      color: #fef1b3; }
+      body dl dd#ticketOwnerName span#active {
+        color: red;
+        margin-left: 140px; }
+      body dl dd#ticketOwnerName div#nameCustomBullet {
+        border: 5px solid #70b37a;
+        float: left;
+        margin-top: 15px;
+        margin-right: 5px;
+        border-radius: 20px; }
+    body dl dd#responceTime, body dl dd#lastAction {
+      color: #aaaaaa; }
+    body dl dd#status {
+      color: #e87a52; }
+    body dl dd a#publicLink {
+      margin-left: 140px; }
+
+/*# sourceMappingURL=ticket.css.map */

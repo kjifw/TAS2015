@@ -1,0 +1,211 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/CSS/tree/master/2.%20CSS%20Presentation -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Windows Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Styles/WindowsCalculator.css" />
+</head>
+<body>
+	<div id="calculator">
+		<div id="calculatorHeader">
+			<div id="calculatorLogo">
+				<img src="Images/CalculatorLogo.jpg" alt="CalculatorLogo" />
+				<span>Calculator</span>
+			</div>
+			<div id="calculatorButtons">
+				<input type="button" value="" id="minimize"/>
+				<input type="button" value="" id="maximize" disabled="disabled" />
+				<input type="button" value="" id="close" /> 
+			</div>
+		</div>
+		<div id="calculatorBody">
+			<div id="calculatorNav">
+				<ul>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+			<input type="text" id="calculatorDisplay" value="1234.545644" readonly="readonly" />
+			<table>
+				<tbody>
+					<tr>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+					</tr>
+					<tr>
+						<td colspan="16">63</td>
+						<td colspan="8">47</td>
+						<td colspan="8">32</td>
+					</tr>
+					<tr>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+						<td><a href="#">0</a></td>
+					</tr>
+					<tr>
+						<td colspan="16">31</td>
+						<td colspan="8">15</td>
+						<td colspan="8">0</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="numeralSystem">
+				<input type="radio" name="NumeralSystemType" id="hexNumeralSystem" />
+				<label for="hexNumeralSystem">Hex</label>
+				<input type="radio" name="NumeralSystemType" id="decNumeralSystem" />
+				<label for="decNumeralSystem">Dec</label>
+				<input type="radio" name="NumeralSystemType" id="octNumeralSystem" />
+				<label for="octNumeralSystem">Oct</label>
+				<input type="radio" name="NumeralSystemType" id="binNumeralSystem" />
+				<label for="binNumeralSystem">Bin</label>
+			</div>			
+			<table id="calculatorPad">
+				<tbody>
+					<tr>
+						<td><input type="button" value="" disabled="disabled" /></td>
+						<td><input type="button" value="Mod" /></td>
+						<td><input type="button" value="A" disabled="disabled" /></td>
+						<td><input type="button" value="MC" disabled="disabled" /></td>
+						<td><input type="button" value="MR" disabled="disabled" /></td>
+						<td><input type="button" value="MS" disabled="disabled" /></td>
+						<td><input type="button" value="M+" disabled="disabled" /></td>
+						<td><input type="button" value="M-" disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="(" /></td>
+						<td><input type="button" value=")" /></td>
+						<td><input type="button" value="B" disabled="disabled"  /></td>
+						<td><input type="button" value="" id="returnSign" /></td>
+						<td><input type="button" value="CE" /></td>
+						<td><input type="button" value="C" /></td>
+						<td><input type="button" value="" id="plusMinusSign" /></td>
+						<td><input type="button" value="" id="rootSign" disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="RoL" /></td>
+						<td><input type="button" value="RoR" /></td>
+						<td><input type="button" value="C" disabled="disabled" /></td>
+						<td><input type="button" value="7" class="mainKeypad" /></td>
+						<td><input type="button" value="8" class="mainKeypad" /></td>
+						<td><input type="button" value="9" class="mainKeypad" /></td>
+						<td><input type="button" value="/" /></td>
+						<td><input type="button" value="%" disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Or" /></td>
+						<td><input type="button" value="Xor" /></td>
+						<td><input type="button" value="D" disabled="disabled" /></td>
+						<td><input type="button" value="4" class="mainKeypad" /></td>
+						<td><input type="button" value="5" class="mainKeypad" /></td>
+						<td><input type="button" value="6" class="mainKeypad" /></td>
+						<td><input type="button" value="*" /></td>
+						<td><input type="button" value="1/x" disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Lsh" /></td>
+						<td><input type="button" value="Rsh" /></td>
+						<td><input type="button" value="E" disabled="disabled" /></td>
+						<td><input type="button" value="1" class="mainKeypad" /></td>
+						<td><input type="button" value="2" class="mainKeypad" /></td>
+						<td><input type="button" value="3" class="mainKeypad" /></td>
+						<td><input type="button" value="-" /></td>
+						<td rowspan="2"><input type="button" value="=" /></td>
+					</tr>					
+					<tr>
+						<td><input type="button" value="Not" /></td>
+						<td><input type="button" value="And" /></td>
+						<td><input type="button" value="F" disabled="disabled" /></td>
+						<td colspan="2"><input type="button" value="0" class="mainKeypad" /></td>
+						<td><input type="button" value="." disabled="disabled" /></td>
+						<td><input type="button" value="+" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="dataUnit">
+				<input type="radio" name="dataUnitType" id="qword" />
+				<label for="qword">Qword</label>
+				<input type="radio" name="dataUnitType" id="dword" />
+				<label for="dword">Dword</label>
+				<input type="radio" name="dataUnitType" id="word" />
+				<label for="word">Word</label>
+				<input type="radio" name="dataUnitType" id="byte" />
+				<label for="byte">Byte</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
