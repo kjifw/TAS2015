@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Sort 3 numbers</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-first-number">first: </label>
+	<input type="text" id="tb-first-number" />	
+	<label for="tb-second-number">second: </label>
+	<input type="text" id="tb-second-number" />
+	<label for="tb-third-number">third: </label>
+	<input type="text" id="tb-third-number" />
+	<a href="#" onclick="onSortDescendingBtnClick()">Sort Descending</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onSortDescendingBtnClick(){
+			var firstNumber = jsConsole.readInteger("#tb-first-number"),
+			secondNumber = jsConsole.readInteger("#tb-second-number"),
+			thirdNumber = jsConsole.readInteger("#tb-third-number");
+			
+			if (firstNumber > secondNumber) {
+                if (firstNumber > thirdNumber) {
+                    if (secondNumber > thirdNumber) {
+                        jsConsole.writeLine(firstNumber + " " + secondNumber + " " + thirdNumber);
+                    } else {
+                        jsConsole.writeLine(firstNumber + " " + thirdNumber + " " + secondNumber);
+                    }
+                } else {
+                    jsConsole.writeLine(thirdNumber + " " + firstNumber + " " + secondNumber);
+                }
+            } else {
+                if (secondNumber > thirdNumber) {
+                    if (firstNumber > thirdNumber) {
+                        jsConsole.writeLine(secondNumber + " " + firstNumber + " " + thirdNumber);
+                    } else {
+                        jsConsole.writeLine(secondNumber + " " + thirdNumber + " " + firstNumber);
+                    }
+                } else {
+                    jsConsole.writeLine(thirdNumber + " " + secondNumber + " " + firstNumber);
+                }
+            }
+		}
+	</script>
+</body>
+</html>

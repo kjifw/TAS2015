@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lexicographically Smallest</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	var doc = document;
+	var nav = navigator;
+	var win = window;
+	
+	var result = FindMin(doc);
+	jsConsole.writeLine(doc + " first property: " + result);
+	result = FindMin(nav);
+	jsConsole.writeLine(nav + " first property: " + result);
+	result = FindMin(win);
+	jsConsole.writeLine(win + " first property: " + result);
+	
+	jsConsole.writeLine("");
+	
+	result = FindMax(doc);
+	jsConsole.writeLine(doc + " last property: " + result);
+	result = FindMax(nav);
+	jsConsole.writeLine(nav + " last property: " + result);
+	result = FindMax(win);
+	jsConsole.writeLine(win + " last property: " + result);
+	
+	function FindMin(obj) {
+		var min = "z";
+		for (var property in obj) {
+			if(property <= min){
+				min = property;
+			}
+		}
+		return min;
+	}
+	function FindMax(obj) {
+		var max = "a";
+		for (var property in obj) {
+			if(property >= max){
+				max = property;
+			}
+		}
+		return max;
+	}
+	</script>
+</body>
+</html>

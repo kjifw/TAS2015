@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Min Max of Sequence</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<input type="text" id="tb-number" />
+	<a href="#" id="btn-solve" onclick="onPrintMinMax()">Min/Max Of Sequence(use interval between numbers)</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	function onPrintMinMax(){
+		var numbersAsArr = jsConsole.read("#tb-number").split(" ");
+		var numbers = [];
+		var minNumber = Number.MAX_VALUE;
+		var maxNumber = Number.MIN_VALUE;
+
+		for (var i = 0; i < numbersAsArr.length; i+=1) {
+			numbers[i] =  numbersAsArr[i] | 0;
+			if (numbers[i] < minNumber) {
+				minNumber = numbers[i];
+			}
+			if (numbers[i] > maxNumber) {
+				maxNumber = numbers[i];
+			}
+		}
+
+		jsConsole.writeLine("sequence: " + numbers.join(" "));
+		jsConsole.writeLine("min number in sequence: " + minNumber);
+		jsConsole.writeLine("max number in sequence: " + maxNumber);
+	}
+	</script>
+</body>
+</html>

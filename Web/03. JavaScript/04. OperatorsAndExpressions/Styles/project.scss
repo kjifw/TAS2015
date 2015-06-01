@@ -1,0 +1,75 @@
+html, body, div, input {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin linear-gradient($from-color, $to-color, $from-pos, $to-pos) 
+{
+	background: $from-color;
+	background: -moz-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -webkit-gradient(linear, left top, left bottom, $from-color $from-pos, $to-color $to-pos);	
+	background: -webkit-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -o-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: -ms-linear-gradient(top, $from-color $from-pos, $to-color $to-pos);
+	background: linear-gradient(to bottom, $from-color $from-pos, $to-color $to-pos);	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 );
+}	
+
+body {
+	padding-left: 20px;
+	padding-top: 20px;
+
+	#wrapper {
+		width: 768px;
+		font-size: 16px;
+		border-radius: 10px;
+		//border: 1px solid red;
+		box-sizing: border-box;
+		//@include linear-gradient(rgba(249,198,103,1), rgba(247,150,33,1), 0%, 100%);
+		@include linear-gradient(rgba(119, 170, 255, 1), rgba(170, 204, 255, 1), 0%, 100%);
+
+		#taskButtons {
+			//border: 1px solid black;
+			padding: 5px;
+			margin-bottom: 15px;
+
+			input[type="button"] {
+				margin: 5px;
+				padding: 2px;
+
+				border: 2px solid #000000;
+				border-radius: 10px;
+
+				background-color: #FFFFFF;
+				color: #000000;
+				
+				font-size: 0.9em;
+
+				&:hover {
+					background-color: #000000;
+					color: #FFFFFF;
+					border: 2px solid #FFFFFF;
+				}
+			}
+		}
+		
+		#taskCondition {
+			//border: 1px solid blue;
+			height: 110px;
+			overflow-y: scroll;
+			padding: 0 20px;
+		}
+
+		#taskControls {
+			//border: 1px solid green;			
+			padding: 20px;
+		}
+
+		#taskSolution {
+			//border: 1px solid blue;
+			height: 110px;
+			overflow-y: scroll;
+			padding: 0 20px 20px 20px;
+		}
+	}
+}

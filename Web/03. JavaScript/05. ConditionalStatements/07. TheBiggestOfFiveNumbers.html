@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The biggest of five numbers</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-first-number">first: </label>
+	<input type="text" id="tb-first-number" />	
+	<label for="tb-second-number">second: </label>
+	<input type="text" id="tb-second-number" />
+	<label for="tb-third-number">third: </label>
+	<input type="text" id="tb-third-number" />
+	<label for="tb-fourth-number">fourth: </label>
+	<input type="text" id="tb-fourth-number" />
+	<label for="tb-fifth-number">fifth: </label>
+	<input type="text" id="tb-fifth-number" />
+	<a href="#" onclick="onFindGreatestNumberBtnClick()">Find greatest number</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onFindGreatestNumberBtnClick(){
+			var first = jsConsole.readInteger("#tb-first-number"),
+			second = jsConsole.readInteger("#tb-second-number"),
+			third = jsConsole.readInteger("#tb-third-number"),
+			fourth = jsConsole.readInteger("#tb-fourth-number"),
+			fifth = jsConsole.readInteger("#tb-fifth-number"),
+			greatest = first;
+			
+			if(second > greatest){
+				greatest = second;
+			}
+
+			if(third > greatest){
+				greatest = third;
+			}
+
+			if(fourth > greatest){
+				greatest = fourth;
+			}
+
+			if(fifth > greatest){
+				greatest = fifth;
+			}
+			
+			jsConsole.writeLine(greatest);
+		}
+	</script>
+</body>
+</html>

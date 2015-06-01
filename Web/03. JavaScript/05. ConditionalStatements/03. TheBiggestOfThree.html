@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Biggest of three</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-first-number">first: </label>
+	<input type="text" id="tb-first-number" />	
+	<label for="tb-second-number">second: </label>
+	<input type="text" id="tb-second-number" />
+	<label for="tb-third-number">third: </label>
+	<input type="text" id="tb-third-number" />
+	<a href="#" onclick="onFindBiggestIntBtnClick()">Find biggest integer</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onFindBiggestIntBtnClick(){
+			var firstNumber = jsConsole.readFloat("#tb-first-number"),
+			secondNumber = jsConsole.readFloat("#tb-second-number"),
+			thirdNumber = jsConsole.readFloat("#tb-third-number"),
+			biggestNumber = firstNumber;
+			
+			if(secondNumber > biggestNumber){
+				biggestNumber = secondNumber;
+				if(thirdNumber > biggestNumber){
+					biggestNumber = thirdNumber;
+				}
+			}
+
+			jsConsole.writeLine(biggestNumber);
+		}
+	</script>
+</body>
+</html>

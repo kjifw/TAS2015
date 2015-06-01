@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quadratic equation</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-a-number">a: </label>
+	<input type="text" id="tb-a-number" />	
+	<label for="tb-b-number">b: </label>
+	<input type="text" id="tb-b-number" />
+	<label for="tb-c-number">c: </label>
+	<input type="text" id="tb-c-number" />
+	<a href="#" onclick="onSolveEquationBtnClick()">Solve equation</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onSolveEquationBtnClick(){
+			var a = jsConsole.readInteger("#tb-a-number"),
+			b = jsConsole.readInteger("#tb-b-number"),
+			c = jsConsole.readInteger("#tb-c-number"),
+			d = (b * b) - (4 * a * c),
+			x1 = undefined,
+			x2 = undefined;
+			
+			if (d < 0) {
+				jsConsole.writeLine("No real roots.");
+			} else if (d == 0) {
+				if (a != 0) {
+					x1 = (-b) / (2 * a);
+					jsConsole.writeLine(x1);
+				} else {
+					jsConsole.writeLine("No real roots.");
+				}
+			} else {
+				if (a != 0) {
+					x1 = ((-b) + Math.sqrt(d)) / (2 * a);
+					x2 = ((-b) - Math.sqrt(d)) / (2 * a);
+					
+					jsConsole.writeLine(x1);
+					jsConsole.writeLine(x2);
+				} else {
+					x1 = (-c) / b;
+					jsConsole.writeLine(x1);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

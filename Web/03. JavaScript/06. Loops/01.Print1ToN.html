@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print 1 to n</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<input type="text" id="tb-number" />
+	<a href="#" id="btn-solve" onclick="onPrintOneToN()">Print 1 to N</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	function onPrintOneToN(){
+		var n = jsConsole.readInteger("#tb-number");
+		
+		for (i = 1; i <= n; i+=1) {
+			jsConsole.writeLine(i);
+		}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exchange if greater</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<label for="tb-first-number">first number: </label>
+	<input type="text" id="tb-first-number" />
+	<label for="tb-second-number">second number: </label>
+	<input type="text" id="tb-second-number" />
+	<a href="#" onclick="onSwapButtonClick()">Swap if first > second</a>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js" defer>
+	</script>
+	<script type="text/javascript">
+		function onSwapButtonClick() {
+			var firstNumber = jsConsole.readInteger("#tb-first-number");
+			var secondNumber = jsConsole.readInteger("#tb-second-number");
+
+			if (firstNumber > secondNumber) {
+				firstNumber = firstNumber + secondNumber;
+				secondNumber = firstNumber - secondNumber;
+				firstNumber = firstNumber - secondNumber;
+			}
+
+			jsConsole.writeLine("firstNumber: " + firstNumber);
+			jsConsole.writeLine("secondNumber: " + secondNumber);
+		}
+	</script>
+</body>
+</html>

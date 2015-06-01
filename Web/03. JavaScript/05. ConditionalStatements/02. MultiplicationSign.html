@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication sign</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-first-number">first: </label>
+	<input type="text" id="tb-first-number" />	
+	<label for="tb-second-number">second: </label>
+	<input type="text" id="tb-second-number" />
+	<label for="tb-third-number">third: </label>
+	<input type="text" id="tb-third-number" />
+	<a href="#" onclick="onFindProductSignBtnClick()">Find the sign of the product</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onFindProductSignBtnClick(){
+			var firstNumber = jsConsole.readInteger("#tb-first-number"),
+			secondNumber = jsConsole.readInteger("#tb-second-number"),
+			thirdNumber = jsConsole.readInteger("#tb-third-number");
+			
+			var check = firstNumber < 0 && secondNumber < 0;
+            check = check || (firstNumber < 0 && thirdNumber < 0);
+            check = check || (secondNumber < 0 && thirdNumber < 0);
+			
+			if (firstNumber < 0 && secondNumber < 0 && thirdNumber < 0) {
+                jsConsole.writeLine("Product sign: -");
+            } else if (check) {
+                jsConsole.writeLine("Product sign: +");
+            } else if (firstNumber < 0 || secondNumber < 0 || thirdNumber < 0) {
+                jsConsole.writeLine("Product sign: -");
+            } else {
+                jsConsole.writeLine("Product sign: +");
+            }
+		}
+	</script>
+</body>
+</html>

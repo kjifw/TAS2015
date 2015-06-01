@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers not divisible</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<input type="text" id="tb-number" />
+	<a href="#" id="btn-solve" onclick="onPrintOneToN()">Numbers not divisible by 3 and 7 at the same time</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	function onPrintOneToN(){
+		var n = jsConsole.readInteger("#tb-number");
+		var divisor = 21;
+		
+		for (i = 1; i <= n; i+=1) {
+			if(i % divisor != 0) {
+				jsConsole.writeLine(i);
+			}
+		}
+	}
+	</script>
+</body>
+</html>

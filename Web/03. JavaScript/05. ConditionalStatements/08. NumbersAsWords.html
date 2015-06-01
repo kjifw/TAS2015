@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers as words</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onDisplayNumberNameBtnClick()">Display number in english</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+		function onDisplayNumberNameBtnClick(){
+			var number = jsConsole.readInteger("#tb-number"),
+			leftDigit = Math.floor(number / 100);  
+			middleDigit = Math.floor((number % 100) / 10);  
+			rightDigit = number % 10;  
+			special = number % 100,
+			middleString = "",
+			leftString = "",
+			rightString = "",
+			specialString = "";                  
+	        
+			switch (rightDigit) {
+				case 0: rightString = ""; break;
+				case 1: rightString = "one"; break;
+				case 2: rightString = "two"; break;
+				case 3: rightString = "three"; break;
+				case 4: rightString = "four"; break;
+				case 5: rightString = "five"; break;
+				case 6: rightString = "six"; break;
+				case 7: rightString = "seven"; break;
+				case 8: rightString = "eight"; break;
+				case 9: rightString = "nine"; break;
+			}
+
+			switch (special) {
+				case 10: specialString = "ten"; break;
+				case 11: specialString = "eleven"; break;
+				case 12: specialString = "twelve"; break;
+				case 13: specialString = "thirteen"; break;
+				case 14: specialString = "fourteen"; break;
+				case 15: specialString = "fifteen"; break;
+				case 16: specialString = "sixteen"; break;
+				case 17: specialString = "seventeen"; break;
+				case 18: specialString = "eighteen"; break;
+				case 19: specialString = "nineteen"; break;
+			}
+
+			switch (middleDigit) {
+				case 0:
+				case 1: middleString = ""; break;
+				case 2: middleString = "twenty"; break;
+				case 3: middleString = "thirty"; break;
+				case 4: middleString = "fourty"; break;
+				case 5: middleString = "fifty"; break;
+				case 6: middleString = "sixty"; break;
+				case 7: middleString = "seventy"; break;
+				case 8: middleString = "eighty"; break;
+				case 9: middleString = "ninety"; break;
+			}
+
+			switch (leftDigit) {
+				case 0: leftString = ""; break;
+				case 1: leftString = "one hundred"; break;
+				case 2: leftString = "two hundred"; break;
+				case 3: leftString = "three hundred"; break;
+				case 4: leftString = "four hundred"; break;
+				case 5: leftString = "five hundred"; break;
+				case 6: leftString = "six hundred"; break;
+				case 7: leftString = "seven hundred"; break;
+				case 8: leftString = "eight hundred"; break;
+				case 9: leftString = "nine hundred"; break;
+			}
+
+			if (number == 0) {
+				jsConsole.writeLine("zero");
+			} else if (number > 0 && number < 10)
+			{
+				jsConsole.writeLine(rightString);
+			} else if (number >= 10 && number < 20) {
+				jsConsole.writeLine(specialString);
+			} else if (number >= 20 && number < 100) {
+				jsConsole.writeLine(middleString + " " + rightString);
+			} else if (number >= 100 && number < 1000) {
+				if (middleDigit == 0 && rightDigit != 0) {
+					jsConsole.writeLine(leftString + " and " + rightString);
+				} else if (special >= 10 && special < 20) {
+					jsConsole.writeLine(leftString + " and " + specialString);
+				} else if (middleDigit != 0 && rightDigit == 0) {
+					jsConsole.writeLine(leftString + " and " + middleString);
+				} else if (rightDigit != 0) {
+					jsConsole.writeLine(leftString + " " + middleString + " " + rightString);
+				} else {
+					jsConsole.writeLine(leftString);
+				}
+			} else {
+				jsConsole.writeLine("Wrong input! Input number between 0 and 999!");
+			}
+		}
+	</script>
+</body>
+</html>

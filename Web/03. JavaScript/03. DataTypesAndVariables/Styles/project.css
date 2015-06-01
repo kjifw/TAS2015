@@ -1,0 +1,47 @@
+html, body, div, input {
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding-left: 20px;
+  padding-top: 20px; }
+  body #wrapper {
+    width: 768px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #77aaff;
+    background: -moz-linear-gradient(top, #77aaff 0%, #aaccff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, #77aaff 0%, #aaccff 100%);
+    background: -webkit-linear-gradient(top, #77aaff 0%, #aaccff 100%);
+    background: -o-linear-gradient(top, #77aaff 0%, #aaccff 100%);
+    background: -ms-linear-gradient(top, #77aaff 0%, #aaccff 100%);
+    background: linear-gradient(to bottom, #77aaff 0%, #aaccff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=0 ); }
+    body #wrapper #taskButtons {
+      padding: 5px;
+      margin-bottom: 15px; }
+      body #wrapper #taskButtons input[type="button"] {
+        margin: 5px;
+        padding: 2px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        color: #000000;
+        font-size: 0.9em; }
+        body #wrapper #taskButtons input[type="button"]:hover {
+          background-color: #000000;
+          color: #FFFFFF;
+          border: 2px solid #FFFFFF; }
+    body #wrapper #taskCondition {
+      height: 110px;
+      overflow-y: scroll;
+      padding: 0 20px; }
+    body #wrapper #taskControls {
+      padding: 20px; }
+    body #wrapper #taskSolution {
+      height: 110px;
+      overflow-y: scroll;
+      padding: 0 20px 20px 20px; }
+
+/*# sourceMappingURL=project.css.map */
