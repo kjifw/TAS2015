@@ -1,0 +1,58 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>04. Maximal increasing sequence</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequnce (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence" />
+	<a href="#" onclick="onFindMaxIncreasingSequenceBtnClick()">Find max equel sequence</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onFindMaxIncreasingSequenceBtnClick () {
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		currentMaxSeqIndex = 0,
+		currentMaxSeqCount = 1,
+		maxSeqIndex = 0,
+		maxSeqCount = 1,
+		sequenceAsStrArr = sequenceAsStr.split(" "),
+		sequence = new Array(sequenceAsStrArr.length);
+
+		for (var i = 0; i < sequenceAsStrArr.length; i+=1) {
+			sequence[i] = sequenceAsStrArr[i] | 0;
+		}
+		
+		for (var i = 1; i < sequence.length; i+=1) {
+			if (sequence[i - 1] < sequence[i]) {
+				currentMaxSeqCount += 1;
+				currentMaxSeqIndex = i;
+			} else {
+				currentMaxSeqCount = 1;
+				currentMaxSeqIndex = i;
+			}
+			if (currentMaxSeqCount > maxSeqCount) {
+				maxSeqCount = currentMaxSeqCount;
+				maxSeqIndex = currentMaxSeqIndex - currentMaxSeqCount + 1;
+			}
+		}
+
+		jsConsole.writeLine("max sequence index: " + maxSeqIndex);
+		jsConsole.writeLine("max sequence count: " + maxSeqCount);
+
+		jsConsole.write("max sequence: ");
+		for (var i = maxSeqIndex; i < maxSeqIndex + maxSeqCount; i+=1) {
+			jsConsole.write(sequence[i] + " ");
+		}
+
+		jsConsole.writeLine("");
+	}
+	</script>
+</body>
+</html>

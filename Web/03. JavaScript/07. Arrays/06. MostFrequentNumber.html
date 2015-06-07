@@ -1,0 +1,51 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>06. Most frequent number</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequence (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence" />
+	<a href="#" onclick="onMostFreqBtnClick()">Find most frequent number in sequence</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onMostFreqBtnClick(){
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		sequenceAsStrArr = sequenceAsStr.split(" "),
+		elements = new Array(sequenceAsStrArr.length),
+		currentIndex = 0,
+		currentCount = 1,
+		maxIndex = 0,
+		maxCount = 1;
+
+		for (var i = 0; i < sequenceAsStrArr.length; i+=1) {
+			elements[i] = sequenceAsStrArr[i] | 0;
+		}
+
+		for (var i = 0; i < elements.length - 1; i+=1) {
+			currentIndex = i;
+			currentCount = 1;
+			for (var j = i + 1; j < elements.length; j+=1) {
+				if (elements[i] == elements[j]) {
+					currentCount += 1;
+				}
+			}
+			if (currentCount > maxCount) {
+				maxCount = currentCount;
+				maxIndex = currentIndex;
+			}
+		}
+
+		jsConsole.writeLine("most frequent number: " + elements[maxIndex]);
+		jsConsole.writeLine("count: " + maxCount + " times");
+	}
+	</script>
+</body>
+</html>

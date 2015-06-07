@@ -1,0 +1,41 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01. English digit</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onGetLastDigitBtnClick()">Last digit in english</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onGetLastDigitBtnClick() {
+		var number = jsConsole.readInteger("#tb-number"),
+		lastDigit = number % 10,
+		lastDigitInEnglish = "not a digit";
+		
+		switch (lastDigit){
+			case 0: lastDigitInEnglish = "zero"; break;
+			case 1: lastDigitInEnglish = "one"; break;
+			case 2: lastDigitInEnglish = "two"; break;
+			case 3: lastDigitInEnglish = "three"; break;
+			case 4: lastDigitInEnglish = "four"; break;
+			case 5: lastDigitInEnglish = "five"; break;
+			case 6: lastDigitInEnglish = "six"; break;
+			case 7: lastDigitInEnglish = "seven"; break;
+			case 8: lastDigitInEnglish = "eight"; break;
+			case 9: lastDigitInEnglish = "nine"; break;
+		}
+
+		jsConsole.writeLine(lastDigitInEnglish);
+	}
+	</script>
+</body>
+</html>

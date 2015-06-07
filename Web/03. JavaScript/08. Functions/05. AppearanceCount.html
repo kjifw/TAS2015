@@ -1,0 +1,43 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>05. Appearance count</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-array">Array (use 1 space as separator): </label>
+	<input type="text" id="tb-array" />
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onHitCountBtnClick()">Number of matches</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+		
+	function onHitCountBtnClick(){
+		var sequenceAsStr = jsConsole.read("#tb-array"),
+		elementsStr = sequenceAsStr.trim().split(" "),
+		elements = new Array(elementsStr.length),
+		counter = 0,		
+		number = jsConsole.readInteger("#tb-number");
+		
+		for (var i in elementsStr) {
+		    elements[i] = parseInt(elementsStr[i]);
+		}
+		
+		for (var i = 0; i < elements.length; i+=1) {
+			if(elements[i] == number) {
+				counter++;
+			}
+		}
+		
+		jsConsole.writeLine("Number is: " + number);
+		jsConsole.writeLine("Number of hits: " + counter);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>07. Binary Search</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequence (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence">
+	<label for="tb-search">Search for: </label>
+	<input type="text" id="tb-search" />
+	<a href="#" onclick="onBinarySearchBtnClick()">Binary Search</a>
+	<div id="js-console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onBinarySearchBtnClick(){
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		sequenceAsStrArr = sequenceAsStr.split(" "),
+		elements = new Array(sequenceAsStrArr.length),
+		searchNumber = jsConsole.readInteger("#tb-search"),
+		min = 0,
+		max = elements.length - 1,
+		middle = Math.floor((max + min) / 2),
+		index = -1;  
+		
+		for (var i = 0; i < sequenceAsStrArr.length; i++) {
+			elements[i] = sequenceAsStrArr[i] | 0;
+		}
+
+		while (max >= min){
+			middle = Math.floor((max + min) / 2);
+			if (searchNumber < elements[middle]) {
+				max = middle - 1;
+			} else if (searchNumber > elements[middle]) {
+				min = middle + 1;
+			} else if (searchNumber == elements[middle]) {
+				max = min - 1;
+				index = middle;
+			}
+		}
+		
+		if(index == -1){
+			jsConsole.writeLine("Number not found");
+		}
+		else{
+			jsConsole.writeLine("Position: " + index);
+		}		
+	}
+	</script>
+</body>
+</html>

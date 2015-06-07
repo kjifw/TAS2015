@@ -1,0 +1,53 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>06. Larger than neighbours</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequence (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence" />
+	<label for="tb-position">Position: </label>
+	<input type="text" id="tb-position" />
+	<a href="#" onclick="onLargerThanNeighbours()">Check if number is larger than neighbours</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+
+	function onLargerThanNeighbours(){
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		elementsStr = sequenceAsStr.trim().split(" "),
+		elements = new Array(elementsStr.length),
+		position = jsConsole.readInteger("#tb-position"),
+		result = "";
+		
+		for (var i = 0; i < elementsStr.length; i+=1) {
+			elements[i] = parseInt(elementsStr[i]);
+		} 
+		
+		if(position >= 1 && position <= elements.length - 2) {
+			result = isLarger(elements, position)
+			jsConsole.writeLine(result);
+		} else {
+			jsConsole.writeLine("Invalid position");
+		}
+	}
+
+	function isLarger(elem, pos){
+		var result = "";
+
+		if(elem[pos] > elem[pos - 1] && elem[pos] > elem[pos + 1]) {
+			result = "Element " + elem[pos] + " at position " + pos + " is larger than its neighbours";
+		} else {
+			result = "Element " + elem[pos] + " at position " + pos + " is NOT larger than its neighbours";
+		}
+
+		return result;
+	}
+	</script>
+</body>
+</html>

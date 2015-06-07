@@ -1,0 +1,28 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01. Increase array members</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<a href="#" onclick="onPrintArrayBtnClick()">Print Array</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onPrintArrayBtnClick () {
+		var simpleArrLength = 20;
+		var simpleArr = new Array(simpleArrLength);
+
+		for (var i = 0; i < simpleArr.length; i+=1) {
+			simpleArr[i] = i * 5;
+			jsConsole.writeLine(simpleArr[i]);
+		}
+	}
+	</script>
+</body>
+</html>

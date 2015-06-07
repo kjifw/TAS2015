@@ -1,0 +1,49 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>05. Selection Sort</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequence (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence" />
+	<a href="#" onclick="onSelectionSortBtnClick()">Sort</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onSelectionSortBtnClick(){
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		sequenceAsStrArr = sequenceAsStr.split(" "),
+		elements = new Array(sequenceAsStrArr.length), 
+		min = 0;
+		
+		for (var i = 0; i < sequenceAsStrArr.length; i+=1) {
+			elements[i] = sequenceAsStrArr[i] | 0;
+		}
+		
+		jsConsole.writeLine("Unsorted elements: " + elements);
+
+		for (var i = 0; i < elements.length - 1; i+=1) {
+			min = i;
+			for (var j = i + 1; j < elements.length; j+=1){
+				if (elements[j] < elements[min]){
+					min = j;
+				}
+			}
+			if (min != i){
+				var temp = elements[min];
+				elements[min] = elements[i];
+				elements[i] = temp;
+			}
+		}
+
+		jsConsole.writeLine("Sorted: " + elements);
+	}
+</script>
+</body>
+</html>

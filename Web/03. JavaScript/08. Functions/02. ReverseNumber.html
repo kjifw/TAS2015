@@ -1,0 +1,32 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02. Reverse number</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<a href="#" onclick="onReverseDigitsBtnClick()">Reverse digits of the number</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onReverseDigitsBtnClick(){
+		var number = jsConsole.readInteger("#tb-number"),
+		result = 0;
+		
+		while(number > 0) {
+			result = result * 10 + number % 10;
+			number = Math.floor(number / 10);
+		}
+
+		jsConsole.writeLine(result);
+	}
+	</script>
+</body>
+</html>

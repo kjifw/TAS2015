@@ -1,0 +1,94 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>03. Deep Copy</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		testFunction();
+
+		function deepCopy (item) {
+			var copied = undefined;
+
+			if (typeof(item) == "number" ||
+				typeof(item) == "string" ||
+				typeof(item) == "boolean" ||
+				item == undefined ||
+				item == null) {
+
+				copied = item;
+			} else if (Array.isArray(item)) {
+				copied = [];
+				for (var i = 0; i < item.length; i+=1) {
+					copied[i] = item[i];
+				}
+			} else {
+				copied = {};
+				for (var attr in item) {
+					copied[attr] = item [attr];
+				}
+			}
+
+			return copied;
+		}
+
+		function Person (fname, lname, age) {
+			this.firstName = fname;
+			this.lastName = lname;
+			this.age = age;
+			this.toString = function() {
+				return this.firstName + " " + this.lastName + " age: " + this.age;
+			}
+			this.addYears = function(n) {
+				this.age = this.age + n;
+			}
+		}
+
+		function testFunction() {
+			var int = 1,
+				string = "word",
+				bool = true,
+				undefinedValue = undefined,
+				nullValue = null,
+				arr = [1, 2, 3, 4],
+				obj = new Person("Gosho", "Toshev", 21),
+				deepCopyInt = deepCopy(int),
+				deepCopyString = deepCopy(string),
+				deepCopyBool = deepCopy(bool),
+				deepCopyUndefined = deepCopy(undefinedValue),
+				deepCopyNull = deepCopy(nullValue),
+				deepCopyArr = deepCopy(arr),
+				deepCopyObj = deepCopy(obj),
+				copiedArr = arr,
+				copiedObj = obj;
+
+			jsConsole.writeLine("value: " + int + "; copied: " + deepCopyInt);
+			jsConsole.writeLine("value: " + string + "; copied: " + deepCopyString);
+			jsConsole.writeLine("value: " + bool + "; copied: " + deepCopyBool);
+			jsConsole.writeLine("value: " + undefinedValue + "; copied: " + deepCopyUndefined);
+			jsConsole.writeLine("value: " + nullValue + "; copied: " + deepCopyNull);
+
+			jsConsole.writeLine("value: " + arr);
+			copiedArr.push(5);
+			jsConsole.writeLine("copied arr modified");
+			copiedArr.pop(5);
+			jsConsole.writeLine("without deep copy value is: " + arr);
+			deepCopyArr.push(6);
+			jsConsole.writeLine("with deep copy value is: " + arr + "; copied: " + deepCopyArr);
+
+			jsConsole.writeLine("value: " + obj.toString());
+			deepCopyObj.addYears(10);
+			jsConsole.writeLine("object modified");
+			jsConsole.writeLine("with deep copy value is: " + obj.toString() + "; copied: " + deepCopyObj);
+		}
+	</script>
+</body>
+</html>

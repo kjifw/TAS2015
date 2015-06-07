@@ -1,0 +1,99 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>01. Planar coordinates</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<label for="tb-first-point">First point(use space as separator): </label>
+	<input type="text" id="tb-first-point" />	
+	<label for="tb-second-point">Second point: </label>
+	<input type="text" id="tb-second-point" />
+	<label for="tb-third-point">Third point: </label>
+	<input type="text" id="tb-third-point" />
+	<br />
+	<a href="#" onclick="onCalcDistanceBtnClick()">Calculate distance between two points</a>
+	<a href="#" onclick="onCanFormTriangleBtnClick()">Can points form triangle</a>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		var distanceAtoB,
+			distanceBtoC,
+			distanceCtoA;
+
+		function Point (x, y) {
+			this.coordX = parseFloat(x);
+			this.coordY = parseFloat(y);
+			this.toString = function() {
+				return "P(" + this.coordX + ", " + this.coordY + ")";
+			};
+		}
+
+		function Line (start, end) {
+			if (start instanceof Point && end instanceof Point) {
+				this.start = start;
+				this.end = end;
+				this.toString = function() {
+					return "L(" + this.start.toString() + ", " + this.end.toString() + ")";
+				};
+				this.length = function() {
+					var x = 0,
+						y = 0,
+						lineLength = 0;
+
+					if (this.start instanceof Point && this.end instanceof Point) {
+						x = (this.start.coordX - this.end.coordX) * (this.start.coordX - this.end.coordX),
+						y = (this.start.coordY - this.end.coordY) * (this.start.coordY - this.end.coordY),
+						lineLength = Math.sqrt(x + y);
+					} else {
+						lineLength = NaN;
+					}
+
+					return lineLength;
+				}
+			} else {
+				this.toString = function() {
+					return "incorrect input";
+				}
+			}
+		}
+
+		function onCalcDistanceBtnClick() {
+			var fisrtPoint = jsConsole.read("#tb-first-point").split(" "),
+				secondPoint = jsConsole.read("#tb-second-point").split(" "),
+				thirdPoint = jsConsole.read("#tb-third-point").split(" "),
+				pointA = new Point(parseFloat(fisrtPoint[0]), parseFloat(fisrtPoint[1])),
+				pointB = new Point(parseFloat(secondPoint[0]), parseFloat(secondPoint[1])),
+				pointC = new Point(parseFloat(thirdPoint[0]), parseFloat(thirdPoint[1])),
+				firstLine = new Line(pointA, pointB),
+				secondLine = new Line(pointB, pointC),
+				thirdLine = new Line(pointC, pointA); 
+				distanceAtoB = firstLine.length(),
+				distanceBtoC = secondLine.length(),
+				distanceCtoA = thirdLine.length();
+
+			jsConsole.writeLine("first line: " + firstLine.toString());
+			jsConsole.writeLine("distance between first and second points: " + distanceAtoB);
+			jsConsole.writeLine("second line: " + secondLine.toString());
+			jsConsole.writeLine("distance between second and third points: " + distanceBtoC);
+			jsConsole.writeLine("third line: " + thirdLine.toString());
+			jsConsole.writeLine("distance between third and and points: " + distanceCtoA);
+		}
+		
+		function onCanFormTriangleBtnClick() {
+			if (distanceAtoB < distanceBtoC + distanceCtoA && 
+				distanceBtoC < distanceCtoA + distanceAtoB &&
+				distanceCtoA < distanceAtoB + distanceBtoC) {
+				jsConsole.writeLine("points form triangle");
+			} else {
+				jsConsole.writeLine("points don't form a triangle");
+			}
+		}
+</script>
+</body>
+</html>

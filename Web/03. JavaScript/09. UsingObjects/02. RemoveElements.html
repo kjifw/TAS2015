@@ -1,0 +1,41 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02. Remove elements</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<label for="tb-sequence">Sequence(use space as separator): </label>
+	<input type="text" id="tb-sequence" />	
+	<label for="tb-element-to-remove">Element to remove: </label>
+	<input type="text" id="tb-element-to-remove" />
+	<a href="#" onclick="onRemoveElementsBtnClick()">Remove elements</a>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		function onRemoveElementsBtnClick (argument) {
+			var elementsStrArr = jsConsole.read("#tb-sequence").split(" "),
+				elementToRemove = jsConsole.read("#tb-element-to-remove");
+
+			elementsStrArr.remove(elementToRemove);
+
+			jsConsole.writeLine("After removal: " + elementsStrArr);
+		}
+
+		Array.prototype.remove = function(elementValue) {
+			var index = 0;
+			for (var i = 0, length = this.length; i < length; i+=1) {
+				index = this.indexOf(elementValue);
+				if (index >= 0) {
+					this.splice(index, 1);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

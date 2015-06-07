@@ -1,0 +1,54 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>04. Has property</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		testFunction();
+
+		function Human (fname, lname, age) {
+			this.firstName = fname;
+			this.lastName = lname;
+			this.age = age;
+			this.toString = function() {
+				return this.firstName + " " + this.lastName + " age: " + this.age;
+			}
+			this.addYears = function(n) {
+				this.age = this.age + n;
+			}
+		}
+
+		function checkForProperty(obj, propName) {
+			var result = "property " + propName + " doesn't exist";
+			
+			for(var attr in obj) {
+				if (attr == propName) {
+					result = "property " + propName + " exists";
+					break;
+				}
+			}
+
+			return result;
+		}
+
+		function testFunction () {
+			var person = new Human("Pesho", "Goshov", 22),
+				exsistingAttr = "firstName",
+				notExistingAttr = "gender";
+
+			jsConsole.writeLine(checkForProperty(person, exsistingAttr));
+			jsConsole.writeLine(checkForProperty(person, notExistingAttr)); 
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/07.%20Arrays -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02. Lexicographically comparison</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-first-charArr">First char array: </label>
+	<input type="text" id="tb-first-charArr" />
+	<label for="tb-second-charArr">Second char array: </label>
+	<input type="text" id="tb-second-charArr" />
+	<a href="#" onclick="onCompareCharArrBtnClick()">Compare</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onCompareCharArrBtnClick () {
+		var firstArrAsStr = jsConsole.read("#tb-first-charArr"),
+		secondArrAsStr = jsConsole.read("#tb-second-charArr"),
+		firstArr = firstArrAsStr.split(""),
+		secondArr = secondArrAsStr.split(""),
+		counter = 0,
+		result = "";
+		
+		if (firstArr.length == secondArr.length) {
+			for (var i = 0; i < firstArr.length; i+=1) {
+				if (firstArr[i] == secondArr[i]) {
+					counter+=1;
+				}
+			}
+			if (counter == firstArr.length) {
+				result = "arrays are equal";
+			} else {
+				esult = "arrays are not equal";
+			}
+		} else {
+			result = "arrays are not equal";
+		}
+
+		jsConsole.writeLine(result);
+	}
+	</script>
+</body>
+</html>

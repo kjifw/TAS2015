@@ -1,0 +1,37 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>04. Number of elements</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<a href="#" onclick="onDivCountBtnClick()">Count divs on the page</a>
+	<div id="js-console">
+	</div>
+	<div id="testDiv1">
+	</div>
+	<div id="testDiv2">
+		<div id="testDiv3">
+		</div>
+	</div>
+	<div id="testDiv4">
+		<div id="testDiv5">
+		</div>
+	</div>
+	<div id="testDiv6">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+
+	function onDivCountBtnClick() {
+		var doc = document,
+		divCount = document.getElementsByTagName("div").length; 
+		
+		jsConsole.writeLine(divCount);
+	}
+	</script>
+</body>
+</html>

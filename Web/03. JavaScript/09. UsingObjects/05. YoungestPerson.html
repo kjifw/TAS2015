@@ -1,0 +1,67 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>05. Youngest person</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		testFunction();
+
+		function Human (fname, lname, age) {
+			this.firstName = fname;
+			this.lastName = lname;
+			this.age = age;
+			this.toString = function() {
+				return this.firstName + " " + this.lastName + " age: " + this.age;
+			}
+		}
+
+		function findYoungest(arr) {
+			var youngest = arr[0];
+			
+			for (var i = 1; i < arr.length; i+=1) {
+				if (arr[i].age < youngest.age) {
+					youngest = arr[i];
+				}
+			}
+
+			return youngest;
+		}
+
+		function testFunction () {
+			var youngest,
+			people = [		
+			new Human("petar", "petrov", 25),
+			new Human("georgi", "toshev", 23),
+			new Human("maria", "pesheva", 19),
+			new Human("nikolay", "petrov", 17),
+			new Human("kalina", "kirova", 18),
+			new Human("ivan", "ivanov", 22),
+			new Human("petko", "petkov", 21),
+			new Human("teodora", "todorova", 23),
+			new Human("dimitar", "dimitrov", 25),
+			new Human("antonia", "atanasova", 24),
+			];
+
+			jsConsole.writeLine("array of people: ");
+			for (var i = 0; i < people.length; i+=1) {
+				jsConsole.writeLine(people[i].toString());
+			}
+
+			jsConsole.writeLine("");
+			jsConsole.writeLine("youngest person: ");
+			
+			youngest = findYoungest(people);
+			jsConsole.writeLine(youngest);
+		}
+	</script>
+</body>
+</html>

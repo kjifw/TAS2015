@@ -1,0 +1,86 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/09.%20Using%20Objects -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>06. Grouping</title>
+	<link rel="stylesheet" type="text/css" href="Styles/js-console.css">
+</head>
+<body>
+	<div id="js-console">
+	</div>
+	<script type="text/javascript" src="Scripts/js-console.js">
+	</script>
+	<script type="text/javascript">	
+		"use strict";
+
+		testFunction();
+
+		function Human (fname, lname, age) {
+			this.firstName = fname;
+			this.lastName = lname;
+			this.age = age;
+			this.toString = function() {
+				return this.firstName + " " + this.lastName + " age: " + this.age;
+			}
+		}
+
+		function groupBy(arr, attr) {
+			var currentAttribute,
+				grouped = {};
+
+			for(var i in arr) {
+				currentAttribute = arr[i][attr];
+				grouped[currentAttribute] = grouped[currentAttribute] || [];
+				grouped[currentAttribute].push(arr[i]);
+			}
+
+			return grouped;
+		}
+
+		function printArr(arr, attr) {
+			jsConsole.writeLine("grouped by: " + attr)
+			for (var i in arr) {
+				jsConsole.writeLine(arr[i].join(", "));
+			}
+			jsConsole.writeLine("");
+		}
+
+		function testFunction () {
+			var groupedByFirstName,
+				groupedByLastName,
+				groupedByAge,
+				attribute,
+				people = [		
+			new Human("petar", "petrov", 25),
+			new Human("georgi", "toshev", 23),
+			new Human("petar", "toshev", 19),
+			new Human("nikolay", "petrov", 23),
+			new Human("nikolay", "kirov", 18),
+			new Human("ivan", "ivanov", 22),
+			new Human("petko", "petkov", 21),
+			new Human("todor", "ivanov", 25),
+			new Human("ivan", "kirov", 25),
+			new Human("todor", "petkov", 24),
+			];
+
+			jsConsole.writeLine("array of people: ");
+			for (var i = 0; i < people.length; i+=1) {
+				jsConsole.writeLine(people[i].toString());
+			}
+			jsConsole.writeLine("");
+
+			attribute = "firstName";
+			groupedByFirstName = groupBy(people, attribute);
+			printArr(groupedByFirstName, attribute);
+						
+			attribute = "lastName";
+			groupedByLastName = groupBy(people, attribute);
+			printArr(groupedByLastName, attribute);
+			
+			attribute = "age";
+			groupedByAge = groupBy(people, attribute);
+			printArr(groupedByAge, attribute);
+		}
+	</script>
+</body>
+</html>

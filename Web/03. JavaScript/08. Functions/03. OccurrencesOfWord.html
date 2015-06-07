@@ -1,0 +1,34 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>03. Occurrences of word</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-text">Text: </label>
+	<input type="text" id="tb-text" />
+	<label for="tb-word">Word: </label>
+	<input type="text" id="tb-word" />
+	<a href="#" onclick="onNumberOfOccurrencesBtnClick()">Finds all occurrences of word in a text</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+
+	function onNumberOfOccurrencesBtnClick(){
+		var text = jsConsole.read("#tb-text"),
+		word = jsConsole.read("#tb-word"),
+		re = new RegExp("(^|\\W+)" + word + "($|\\W+)", "gi"),
+		hitCount = 0;
+
+		hitCount = text.match(re).length;
+		jsConsole.writeLine("text: " + text);
+		jsConsole.writeLine("word: " + word);
+		jsConsole.writeLine("count: " + hitCount);
+	}
+	</script>
+</body>
+</html>

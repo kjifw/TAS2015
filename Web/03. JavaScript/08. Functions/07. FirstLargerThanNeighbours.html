@@ -1,0 +1,48 @@
+<!-- For task condition please refer to https://github.com/TelerikAcademy/JavaScript-Fundamentals/tree/master/08.%20Functions -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>07. First larger than neighbours</title>
+	<link href="Styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<label for="tb-sequence">Sequence (use 1 space as separator): </label>
+	<input type="text" id="tb-sequence" />
+	<a href="#" onclick="onLargerThanNeighbours()">Find first larger than neighbours</a>
+	<div id="js-console">
+	</div>
+	<script src="Scripts/js-console.js">	  
+	</script>
+	<script>
+	"use strict";
+	
+	function onLargerThanNeighbours(){
+		var sequenceAsStr = jsConsole.read("#tb-sequence"),
+		elementsStr = sequenceAsStr.trim().split(" "),
+		elements = new Array(elementsStr.length),
+		position = -1;
+		
+		for (var i = 0; i < elementsStr.length; i++) {
+			elements[i] = parseInt(elementsStr[i]);
+		}
+		
+		position = isLarger(elements);
+
+		jsConsole.writeLine("Position of the first element larger than neighbours is: " + position);
+	}
+
+	function isLarger(elements){
+		var position = -1;
+		
+		for (var i = 1; i < elements.length - 1; i++) {
+			if(elements[i] > elements[i - 1] && elements[i] > elements[i + 1]) {
+				position = i;
+				break;
+			}			
+		}
+		
+		return position;
+	}
+	</script>
+</body>
+</html>
