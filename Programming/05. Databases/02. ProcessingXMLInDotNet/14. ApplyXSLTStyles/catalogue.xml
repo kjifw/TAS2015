@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogue>
+    <album>
+        <name>Dead Letters</name>
+        <artist>The Rasmus</artist>
+        <year>2003</year>
+        <producer>Martin Hansen</producer>
+        <price>17.50</price>
+        <songs>
+            <song>              
+                <title>In the Shadows</title>
+                <duration>4:08</duration>                
+            </song>
+            <song>
+                <title>Time to Burn</title>
+                <duration>4:32</duration>
+            </song>
+            <song>
+                <title>Funeral Song</title>
+                <duration>3:17</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Collide</name>
+        <artist>Skillet</artist>
+        <year>2003</year>
+        <producer>Paul Ebersold</producer>
+        <price>22.50</price>
+        <songs>
+            <song>              
+                <title>Forsaken</title>
+                <duration>4:12</duration>                
+            </song>
+            <song>
+                <title>Savior</title>
+                <duration>4:33</duration>
+            </song>
+            <song>
+                <title>Collide</title>
+                <duration>5:38</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Comatose</name>
+        <artist>Skillet</artist>
+        <year>2006</year>
+        <producer>Brian Howes</producer>
+        <price>19.70</price>
+        <songs>
+            <song>              
+                <title>Say Goodbye</title>
+                <duration>4:16</duration>                
+            </song>
+            <song>
+                <title>Whispers in the Dark</title>
+                <duration>3:24</duration>
+            </song>
+            <song>
+                <title>Looking for Angels</title>
+                <duration>4:31</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Rosenrot</name>
+        <artist>Rammstein</artist>
+        <year>2005</year>
+        <producer>Howard Benson</producer>
+        <price>24.40</price>
+        <songs>
+            <song>              
+                <title>Benzin</title>
+                <duration>3:46</duration>                
+            </song>
+            <song>
+                <title>Zerstören</title>
+                <duration>5:28</duration>
+            </song>
+            <song>
+                <title>Feuer und Wasser</title>
+                <duration>5:17</duration>
+            </song>
+        </songs>
+    </album>
+</catalogue>

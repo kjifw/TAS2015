@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+  <album>
+    <name>Dead Letters</name>
+    <artist>The Rasmus</artist>
+    <year>2003</year>
+    <producer>Martin Hansen</producer>
+    <price>17.50</price>
+    <songs>
+      <song>
+        <title>In the Shadows</title>
+        <duration>4:08</duration>
+      </song>
+      <song>
+        <title>Time to Burn</title>
+        <duration>4:32</duration>
+      </song>
+      <song>
+        <title>Funeral Song</title>
+        <duration>3:17</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Comatose</name>
+    <artist>Skillet</artist>
+    <year>2006</year>
+    <producer>Brian Howes</producer>
+    <price>19.70</price>
+    <songs>
+      <song>
+        <title>Say Goodbye</title>
+        <duration>4:16</duration>
+      </song>
+      <song>
+        <title>Whispers in the Dark</title>
+        <duration>3:24</duration>
+      </song>
+      <song>
+        <title>Looking for Angels</title>
+        <duration>4:31</duration>
+      </song>
+    </songs>
+  </album>
+</catalogue>

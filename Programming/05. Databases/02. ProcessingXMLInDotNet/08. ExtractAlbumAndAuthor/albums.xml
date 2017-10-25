@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+  <ablum>
+    <name>Dead Letters</name>
+    <artist>The Rasmus</artist>
+  </ablum>
+  <ablum>
+    <name>Collide</name>
+    <artist>Skillet</artist>
+  </ablum>
+  <ablum>
+    <name>Comatose</name>
+    <artist>Skillet</artist>
+  </ablum>
+  <ablum>
+    <name>Rosenrot</name>
+    <artist>Rammstein</artist>
+  </ablum>
+</albums>

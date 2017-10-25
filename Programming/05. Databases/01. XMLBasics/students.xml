@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+
+<students xmlns:student="urn:students">
+    <student>
+        <name>John Smith</name>
+        <sex>Male</sex>
+        <birthDate>15.10.1990</birthDate>
+        <phone>+359123456789</phone>
+        <email>john@smith.com</email>
+        <course>II</course>
+        <specialty>Programming</specialty>
+        <facultyNumber>123456789</facultyNumber>
+        <exams>
+            <exam>
+                <name>C#</name>
+                <tutor>Ivaylo Kenov</tutor>
+                <score>53.9</score>
+            </exam>
+            <exam>
+                <name>HQC</name>
+                <tutor>Nikolay Kostov</tutor>
+                <score>77</score>
+            </exam>           
+            <exam>
+                <name>DSA</name>
+                <tutor>Doncho Minkov</tutor>
+                <score>41.5</score>
+            </exam>
+        </exams>
+    </student>
+    <student>
+        <name>Jane Smith</name>
+        <sex>Female</sex>
+        <birthDate>11.12.1991</birthDate>
+        <phone>+359987654321</phone>
+        <email>jane@smith.com</email>
+        <course>III</course>
+        <specialty>Web Development</specialty>
+        <facultyNumber>987654321</facultyNumber>
+        <exams>
+            <exam>
+                <name>JavaScript</name>
+                <tutor>Ivailo Kenov</tutor>
+                <score>48.2</score>
+            </exam>
+            <exam>
+                <name>JavaScript UI &amp; DOM</name>
+                <tutor>Evlogy Hristov</tutor>
+                <score>69.4</score>
+            </exam>           
+            <exam>
+                <name>Web Services</name>
+                <tutor>Doncho Minkov</tutor>
+                <score>55.4</score>
+            </exam>
+        </exams>
+    </student>
+</students>
